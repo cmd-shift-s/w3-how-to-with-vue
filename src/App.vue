@@ -32,10 +32,9 @@ html, body {
   margin-left: 220px;
 }
 .page-enter-active, .page-leave-active {
-  transition: all .35s;
+  transition: opacity .35s;
 }
 .page-enter, .page-leave-to {
-  transform: translateX(-20px);
   opacity: 0;
 }
 </style>
