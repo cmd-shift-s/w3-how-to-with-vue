@@ -14,6 +14,7 @@ Vue.use(Router)
 
 const router = new Router({
   mode: 'hash',
+  linkActiveClass: 'is-active',
   routes
 })
 
