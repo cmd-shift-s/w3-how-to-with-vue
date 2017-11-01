@@ -1,15 +1,22 @@
 <template lang="html">
-  <div>
-    <icon-bar>
-      <a v-for="(menu, index) of menus" @click.prevent="pos = index" :class="{active: pos === index}">
-        <i class="fa" :class="`fa-${menu}`"></i>
-      </a>
-    </icon-bar>
-    <icon-bar is-vertical>
-      <a v-for="(menu, index) of menus" @click.prevent="pos = index" :class="{active: pos === index}">
-        <i class="fa" :class="`fa-${menu}`"></i>
-      </a>
-    </icon-bar>
+  <div class="row">
+    <div class="col m3">
+      <p>Vertical:</p>
+      <icon-bar is-vertical>
+        <a v-for="(menu, index) of menus" @click.prevent="pos = index" :class="{active: pos === index}">
+          <i class="fa" :class="`fa-${menu}`"></i>
+        </a>
+      </icon-bar>
+    </div>
+
+    <div class="col m9">
+      <p>Horizontal:</p>
+      <icon-bar>
+        <a v-for="(menu, index) of menus" @click.prevent="pos = index" :class="{active: pos === index}">
+          <i class="fa" :class="`fa-${menu}`"></i>
+        </a>
+      </icon-bar>
+    </div>
   </div>
 </template>
 
