@@ -3,11 +3,16 @@ import Router from 'vue-router'
 
 import Home from '@/pages/Home.vue'
 
-const routes = [
+import Menus from './menus'
+
+export const routes = [
   {
     path: '/',
+    title: 'HOW TO',
+    name: 'HowTo Home',
     component: Home
-  }
+  },
+  Menus
 ]
 
 Vue.use(Router)

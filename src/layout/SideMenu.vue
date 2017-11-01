@@ -2,25 +2,19 @@
   <aside class="left-menu">
     <template v-for="route of routes">
       <h2>{{route.title}}</h2>
-      <router-link class="link" v-for="component of route.components" :key="component.title" :to="component.path">{{component.name}}</router-link>
+      <router-link class="link" v-for="children of route.children" :key="children.path" :to="{name: children.name}" exact>{{children.name}}</router-link>
+      <router-link class="link" v-if="!route.children" :to="route.path" exact>{{route.name}}</router-link>
     </template>
   </aside>
 </template>
 
 <script>
+import {routes} from '@/router'
+
 export default {
   name: 'side-menu',
   data() {
-    return {
-      routes: [
-        {
-          title: 'HOW TO',
-          components: [
-            { name: 'HowTo Home', path: '/' }
-          ]
-        }
-      ]
-    }
+    return {routes}
   }
 }
 </script>
