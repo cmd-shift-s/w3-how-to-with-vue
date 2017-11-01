@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="row">
-    <div class="col m3">
+  <page>
+    <div class="flex1">
       <p>Vertical:</p>
       <icon-bar is-vertical>
         <a v-for="(menu, index) of menus" @click.prevent="pos = index" :class="{active: pos === index}">
@@ -9,7 +9,7 @@
       </icon-bar>
     </div>
 
-    <div class="col m9">
+    <div class="flex2">
       <p>Horizontal:</p>
       <icon-bar>
         <a v-for="(menu, index) of menus" @click.prevent="pos = index" :class="{active: pos === index}">
@@ -17,7 +17,7 @@
         </a>
       </icon-bar>
     </div>
-  </div>
+  </page>
 </template>
 
 <script>

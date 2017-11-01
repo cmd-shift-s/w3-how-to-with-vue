@@ -2,22 +2,10 @@ html, body {
   margin: 0;
   padding: 0;
 }
-.page {
-  margin-left: 220px;
-  padding: 15px;
+
+.flex1 {
+  flex: 1;
 }
-.row {
-  display: table;
-  clear: both;
-  width: 100%;
-}
-.col {
-  float: left;
-  width: 100%;
-}
-.m3 {
-  width: 24.9%;
-}
-.m9 {
-  width: 74.9%;
+.flex2 {
+  flex: 2;
 }

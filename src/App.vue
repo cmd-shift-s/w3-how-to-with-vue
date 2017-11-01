@@ -3,7 +3,7 @@
 
     <side-menu></side-menu>
 
-    <div class="page">
+    <div class="container">
       <transition name="page" mode="out-in">
         <router-view></router-view>
       </transition>
@@ -24,6 +24,10 @@ export default {
 </script>
 
 <style lang="scss">
+.container {
+  margin-left: 220px;
+  padding: 15px;
+}
 .page-enter-active, .page-leave-active {
   transition: opacity .35s;
 }
