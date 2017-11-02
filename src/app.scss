@@ -2,7 +2,14 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
 .flex1 {
   flex: 1;
 }
