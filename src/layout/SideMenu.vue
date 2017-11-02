@@ -1,5 +1,10 @@
 <template lang="html">
   <aside class="left-menu">
+    <div class="logos">
+      <a href="https://github.com/gongzza/w3-how-to-with-vue" class="github" title="github">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+    </div>
     <template v-for="route of routes">
       <h2>{{route.title}}</h2>
       <router-link class="link" v-for="children of route.children" :key="children.path" :to="{name: children.name}" exact>{{children.name}}</router-link>
@@ -26,6 +31,19 @@ export default {
   height: 100%;
   color: #000;
   background-color: #f1f1f1;
+
+  .logos {
+    text-align: center;
+
+    & > a {
+      padding: 0 10px;
+      font-size: 36px;
+    }
+
+    .github {
+      color: black;
+    }
+  }
 }
 h2 {
   margin: 0;
