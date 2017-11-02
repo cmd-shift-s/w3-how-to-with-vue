@@ -1,5 +1,5 @@
 <template lang="html">
-  <page>
+  <page title="Icon Bar">
     <div class="flex1">
       <p>Vertical:</p>
       <icon-bar is-vertical>
