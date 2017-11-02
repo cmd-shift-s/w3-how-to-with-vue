@@ -9,7 +9,7 @@ export default {
   functional: true,
   props: {
     // is-vertical일 경우 horizontal 대신 vertical class를 적용
-    isVertical: Boolean,
+    isVertical: Boolean
   },
   render(h, ctx) {
     const cx = ['icon-bar']
@@ -28,6 +28,8 @@ export default {
 
 <style lang="scss">
 .icon-bar {
+  display: flex;
+
   a {
     cursor: pointer;
     text-align: center; /* Center-align text */
@@ -45,9 +47,9 @@ export default {
   &.vertical {
     width: 90px; /* Set a specific width */
     background-color: #555; /* Dark-grey background */
+    flex-direction: column;
 
     a {
-      display: block; /* Make the links appear below each other instead of side-by-side */
       padding: 16px; /* Add some padding */
       transition: all 0.3s ease; /* Add transition for hover effects */
     }
@@ -59,8 +61,7 @@ export default {
     overflow: auto; /* Overflow due to float */
 
     a {
-      float: left; /* Float links side by side */
-      width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+      flex: 1;
       padding: 12px 0; /* Some top and bottom padding */
       transition: all 0.3s ease; /* Add transition for hover effects */
     }
