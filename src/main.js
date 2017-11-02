@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+// load style sheet
+import './app.scss'
+
 import './bootstrap'
 
 import router from './router'
@@ -8,9 +11,7 @@ import router from './router'
 import Page from './layout/Page.vue'
 Vue.component('page', Page)
 
-// load style sheet
-import './app.scss'
-
+/* eslint-disable */
 new Vue({
   el: '#app',
   router,
