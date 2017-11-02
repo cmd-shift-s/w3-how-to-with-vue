@@ -1,6 +1,6 @@
 <template lang="html">
   <page title="Icon Bar">
-    <div class="flex1">
+    <div>
       <p>Vertical:</p>
       <icon-bar is-vertical>
         <a v-for="(menu, index) of menus" @click.prevent="pos = index" :class="{active: pos === index}">
@@ -9,7 +9,7 @@
       </icon-bar>
     </div>
 
-    <div class="flex2">
+    <div>
       <p>Horizontal:</p>
       <icon-bar>
         <a v-for="(menu, index) of menus" @click.prevent="pos = index" :class="{active: pos === index}">
@@ -36,5 +36,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.contents {
+  div:nth-child(1) { flex: 1 }
+  div:nth-child(2) { flex: 2 }
+}
 </style>
