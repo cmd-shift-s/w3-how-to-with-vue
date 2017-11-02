@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <side-menu></side-menu>
+    <app-menu></app-menu>
 
     <div class="container">
       <transition name="page" mode="out-in">
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import SideMenu from '@/layout/SideMenu.vue'
+import AppMenu from '@/layout/AppMenu.vue'
 
 export default {
   name: 'app',
   components: {
-    SideMenu
+    AppMenu
   }
 }
 </script>
@@ -28,6 +28,14 @@ export default {
   margin-left: 220px;
   padding: 15px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+}
+
 .page-enter-active, .page-leave-active {
   transition: opacity .35s;
 }
