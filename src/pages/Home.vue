@@ -1,10 +1,18 @@
 <template lang="html">
   <page title="W3 How To">
-    <div class="cards">
-      <div class="card">
-        <icon-bar></icon-bar>
-        <p><router-link to="/menus/icon_bar" v-text="gotoBtn"></router-link></p>
-      </div>
+    <div class="card-container">
+        <div class="half">
+          <div class="card">
+            <icon-bar></icon-bar>
+            <p><router-link to="/menus/icon_bar" v-text="gotoBtn"></router-link></p>
+          </div>
+        </div>
+        <div class="half">
+          <div class="card">
+            <menu-icon></menu-icon>
+            <p><router-link to="/menus/menu_icon" v-text="gotoBtn"></router-link></p>
+          </div>
+        </div>
     </div>
   </page>
 </template>
@@ -12,6 +20,7 @@
 <script>
 // menus
 import IconBar from './menus/IconBar.vue'
+import MenuIcon from './menus/MenuIcon.vue'
 
 export default {
   name: 'home',
@@ -21,27 +30,31 @@ export default {
     }
   },
   components: {
-    IconBar
+    IconBar,
+    MenuIcon
   }
 }
 </script>
 
 <style lang="scss">
-.cards {
+.card-container {
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+
+  .half {
+    flex: 1;
+  }
 }
 .card {
-  width: calc(50% - 40px);
   margin: 10px;
   padding: 10px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media (max-width: 768px) {
-  .card {
-    width: 100%;
+  .card-container {
+    flex-direction: column;
   }
 }
 </style>
