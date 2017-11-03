@@ -79,6 +79,7 @@ export default {
 
   .home-button {
     float: left;
+    color: white;
   }
 
   .toggle-button {
