@@ -52,9 +52,6 @@ export default {
   methods: {
     toggleMenu() {
       this.showMenu = !this.showMenu
-    },
-    home() {
-
     }
   }
 }
