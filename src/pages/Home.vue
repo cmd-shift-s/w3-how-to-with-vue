@@ -1,18 +1,18 @@
 <template lang="html">
   <page title="W3 How To">
     <div class="card-container">
-        <div class="half">
-          <div class="card">
-            <icon-bar></icon-bar>
-            <p><router-link to="/menus/icon_bar" v-text="gotoBtn"></router-link></p>
-          </div>
+      <div class="half">
+        <div class="card">
+          <icon-bar></icon-bar>
+          <p><router-link to="/menus/icon_bar" v-text="gotoBtn"></router-link></p>
         </div>
-        <div class="half">
-          <div class="card">
-            <menu-icon></menu-icon>
-            <p><router-link to="/menus/menu_icon" v-text="gotoBtn"></router-link></p>
-          </div>
+      </div>
+      <div class="half">
+        <div class="card">
+          <menu-icon></menu-icon>
+          <p><router-link to="/menus/menu_icon" v-text="gotoBtn"></router-link></p>
         </div>
+      </div>
     </div>
   </page>
 </template>

@@ -1,12 +1,19 @@
 var path = require('path')
 var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+var isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    app: './src/main.js'
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    publicPath: '',
+    filename: isProduction
+      ? 'js/[name].[chunkhash:7].js'
+      : 'js/[name].js'
   },
   module: {
     rules: [
@@ -66,7 +73,11 @@ module.exports = {
     hints: false
   },
   plugins: [
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      inject: true
+    })
   ],
   devtool: '#eval-source-map'
 }
