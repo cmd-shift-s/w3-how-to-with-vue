@@ -2,9 +2,7 @@
   <section class="page">
     <h1 class="title">{{title}}</h1>
     <hr>
-    <div class="contents">
-      <slot></slot>
-    </div>
+    <slot></slot>
   </section>
 </template>
 
@@ -21,10 +19,6 @@ export default {
   .title {
     font-weight: 400;
     margin: 10px 0;
-  }
-  .contents {
-    display: flex;
-    width: 100%;
   }
 }
 </style>
