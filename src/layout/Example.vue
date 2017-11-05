@@ -2,18 +2,17 @@
   <div class="example">
     <hr v-show="!hideHr">
     <h2 v-text="title"></h2>
-    <p v-text="subtitle"></p>
+    <div v-text="compiledSubtitle"></div>
     <h5 v-text="step"></h5>
 
     <div class="contents">
       <h3>{{name}}</h3>
-      <div class="code" v-html="compiledCode">
-      </div>
+      <div class="code" v-html="compiledCode"></div>
     </div>
 
     <div class="explained" v-if="explained">
       <h3>Example Explained</h3>
-      <p v-html="compiledExplained"></p>
+      <div class="comment" v-html="compiledExplained"></div>
     </div>
   </div>
 </template>
@@ -45,6 +44,11 @@ export default {
     compiledExplained() {
       return this.explained
         ? this.compileMarked(this.explained)
+        : ''
+    },
+    compiledSubtitle() {
+      return this.subtitle
+        ? this.compileMarked(this.subtitle)
         : ''
     }
   },
