@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-icon" :class="{'is-anime': isAnimated}" @click="toggleIcon()">
+  <div class="menu-icon" :class="{'is-anime': isAnimated, 'change': isChanged}" @click="toggleIcon()">
     <div class="bar1"></div>
     <div class="bar2"></div>
     <div class="bar3"></div>
@@ -15,10 +15,15 @@ export default {
   props: {
     isAnimated: Boolean // 애니메이션 효과
   },
+  data() {
+    return {
+      isChanged: false
+    }
+  },
   methods: {
     toggleIcon() {
       if (this.isAnimated) {
-        this.$el.classList.toggle('change')
+        this.isChanged = !this.isChanged
       }
     }
   }

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconBar.vue props#is-vertical 1`] = `<div class="icon-bar vertical"></div>`;
+
+exports[`IconBar.vue render default 1`] = `<div class="icon-bar horizontal"></div>`;

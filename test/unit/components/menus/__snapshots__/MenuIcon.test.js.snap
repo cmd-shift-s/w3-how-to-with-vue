@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuIcon.vue props#is-animated 1`] = `
+<div class="menu-icon is-anime">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
+`;
+
+exports[`MenuIcon.vue props#is-animated 2`] = `
+<div class="menu-icon is-anime change">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
+`;
+
+exports[`MenuIcon.vue render default 1`] = `
+<div class="menu-icon">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
+`;
