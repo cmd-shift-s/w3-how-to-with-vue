@@ -1,5 +1,5 @@
 <template lang="html">
-  <div title="W3 How To">
+  <page title="W3 How To">
     <div class="card-container">
       <div class="half">
         <div class="card">
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </page>
 </template>
 
 <script>
