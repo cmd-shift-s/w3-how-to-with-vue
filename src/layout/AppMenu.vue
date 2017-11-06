@@ -14,7 +14,10 @@
           <i class="fa fa-github" aria-hidden="true"></i>
         </a>
       </div>
-      <div class="menu-item" v-for="route of routes">
+      <div class="search">
+        <input type="text" class="searchinput" v-model="search" placeholder="Search...">
+      </div>
+      <div class="menu-item" v-for="route of filteredRoute">
         <h2>{{route.title}}</h2>
         <router-link class="link" v-for="children of route.children" :key="children.path" :to="{name: children.name}" exact>{{children.name}}</router-link>
         <router-link class="link" v-if="!route.children" :to="route.path" exact>{{route.name}}</router-link>
@@ -30,12 +33,34 @@ export default {
   name: 'app-menu',
   data() {
     return {
-      routes
+      routes,
+      search: ''
     }
   },
   computed: {
     '$leftMenu'() {
       return this.$refs.leftMenu
+    },
+    filteredRoute() {
+      const search = this.search.toLowerCase()
+      return search
+        ? this.routes
+          .filter(({name, children}) => {
+            return children
+              ? children.some(({name}) => name.toLowerCase().includes(search))
+              : name.toLowerCase().includes(this.search)
+          })
+          .reduce((routes, route) => {
+            const r = {
+              ...route
+            }
+            if (r.children) {
+              r.children = r.children.filter(({name}) => name.toLowerCase().includes(search))
+            }
+            routes.push(r)
+            return routes
+          }, [])
+        : this.routes
     }
   },
   watch: {
@@ -107,6 +132,16 @@ export default {
 
     .github {
       color: black;
+    }
+  }
+  .search {
+    text-align: center;
+
+    .searchinput {
+      width: 180px;
+      font-size: 14px;
+      padding: 6px;
+      border: 1px solid #ddd;
     }
   }
 }
