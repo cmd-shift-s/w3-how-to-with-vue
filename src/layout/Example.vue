@@ -77,6 +77,10 @@ export default {
 
       pre {
         margin: 0;
+        
+        & > * {
+          white-space: pre-wrap;
+        }
       }
     }
   }
