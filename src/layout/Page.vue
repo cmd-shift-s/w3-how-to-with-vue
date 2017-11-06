@@ -32,10 +32,7 @@ export default {
       type: String,
       required: true
     },
-    intro: {
-      type: String,
-      required: true
-    },
+    intro: String,
     examples: Array
   },
   computed: {

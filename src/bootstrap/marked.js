@@ -1,6 +1,6 @@
 import marked from 'marked'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/solarized-dark.css'
+import 'highlight.js/styles/vs.css'
 
 marked.setOptions({
   highlight(code) {
