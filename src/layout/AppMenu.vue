@@ -7,16 +7,8 @@
       <a class="menu-button toggle-button" @click="toggleMenu()">
         <i class="fa fa-bars"></i>
       </a>
-
-      <div ref="topMenuItems" class="toggle-menu">
-        <div class="menu-item" v-for="route of routes">
-          <h2>{{route.title}}</h2>
-          <router-link class="link" v-for="children of route.children" :key="children.path" :to="{name: children.name}" exact>{{children.name}}</router-link>
-          <router-link class="link" v-if="!route.children" :to="route.path" exact>{{route.name}}</router-link>
-        </div>
-      </div>
     </div>
-    <aside class="left-menu">
+    <aside ref="leftMenu" class="left-menu">
       <div class="logos">
         <a href="https://github.com/gongzza/w3-how-to-with-vue" class="github" title="github">
           <i class="fa fa-github" aria-hidden="true"></i>
@@ -42,8 +34,8 @@ export default {
     }
   },
   computed: {
-    '$topMenuItems'() {
-      return this.$refs.topMenuItems
+    '$leftMenu'() {
+      return this.$refs.leftMenu
     }
   },
   watch: {
@@ -53,10 +45,10 @@ export default {
   },
   methods: {
     toggleMenu() {
-      this.$topMenuItems.classList.toggle('active')
+      this.$leftMenu.classList.toggle('active')
     },
     closeMenu() {
-      this.$topMenuItems.classList.remove('active')
+      this.$leftMenu.classList.remove('active')
     }
   }
 }
@@ -145,6 +137,10 @@ export default {
 @media (max-width: 768px) {
   .left-menu {
     display: none;
+
+    &.active {
+      display: inherit;
+    }
   }
   .top-menu {
     display: block;
