@@ -1,5 +1,8 @@
 <template lang="html">
-  <page title="Menu Icon" :examples="examples">
+  <page
+    title="Menu Icon"
+    intro="a menu icon with CSS"
+    :examples="examples">
     <sample class="menu-icon-page">
       <div>
         <p>Menu Icon:</p>

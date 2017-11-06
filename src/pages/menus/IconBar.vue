@@ -1,5 +1,8 @@
 <template lang="html">
-  <page title="Icon Bar" :examples="examples">
+  <page
+    title="Icon Bar"
+    intro="icon bars with CSS"
+    :examples="examples">
     <sample class="icon-bar-page">
       <div>
         <p>Vertical:</p>
@@ -102,11 +105,6 @@ export default {
           hide_hr: true
         }
       ]
-    }
-  },
-  computed: {
-    isShowExample() {
-      return this.$route.path !== '/'
     }
   },
   components: {

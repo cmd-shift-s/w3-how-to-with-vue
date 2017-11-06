@@ -1,8 +1,15 @@
 <template lang="html">
   <section class="page">
-    <h1 class="title">{{title}}</h1>
+    <h1 class="title"><span v-if="isShowExample">How TO - </span>{{title}}</h1>
     <hr>
+
+    <div class="intro" v-if="isShowExample">
+      <p>Learn how to create {{intro}}.</p>
+      <hr>
+    </div>
+
     <slot></slot>
+
     <div v-if="isShowExample">
       <example v-for="(exam, index) of examples" :key="index"
         :title="exam.title"
@@ -21,7 +28,14 @@
 import Example from './Example.vue'
 export default {
   props: {
-    title: String,
+    title: {
+      type: String,
+      required: true
+    },
+    intro: {
+      type: String,
+      required: true
+    },
     examples: Array
   },
   computed: {
