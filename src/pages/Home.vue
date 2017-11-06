@@ -1,5 +1,5 @@
 <template lang="html">
-  <page title="W3 How To">
+  <div title="W3 How To">
     <div class="card-container">
       <div class="half">
         <div class="card">
@@ -14,13 +14,12 @@
         </div>
       </div>
     </div>
-  </page>
+  </div>
 </template>
 
 <script>
 // menus
-import IconBar from './menus/IconBar.vue'
-import MenuIcon from './menus/MenuIcon.vue'
+import menus from './menus'
 
 export default {
   name: 'home',
@@ -30,8 +29,7 @@ export default {
     }
   },
   components: {
-    IconBar,
-    MenuIcon
+    ...menus
   }
 }
 </script>
