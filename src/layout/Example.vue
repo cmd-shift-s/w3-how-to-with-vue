@@ -2,7 +2,7 @@
   <div class="example">
     <hr v-show="!hideHr">
     <h2 v-text="title"></h2>
-    <div v-text="compiledSubtitle"></div>
+    <div v-html="compiledSubtitle"></div>
     <h5 v-text="step"></h5>
 
     <div class="contents">
