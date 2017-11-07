@@ -32,7 +32,7 @@ export default {
 @media (max-width: 768px) {
   .container {
     margin-left: 0px;
-    margin-top: 50px;
+    margin-top: 45px;
   }
 }
 

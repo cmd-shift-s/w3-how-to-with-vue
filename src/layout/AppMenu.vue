@@ -84,24 +84,28 @@ export default {
   display: none;
   position: fixed;
   top: 0;
-  background-color: #4CAF50;
+  background-color: #5f5f5f;
   width: 100%;
-  height: 50px;
+  height: 45px;
   z-index: 999;
 
   .menu-button {
-    padding: 5px 10px;
-    font-size: 36px;
-    color: #555;
+    padding: 8px 15px;
+    font-size: 22px;
+    color: white;
+
+    &:hover {
+      background-color: black;
+    }
   }
 
   .home-button {
     float: left;
-    color: white;
   }
 
   .toggle-button {
     float: right;
+    cursor: pointer;
   }
 
   .toggle-menu {
