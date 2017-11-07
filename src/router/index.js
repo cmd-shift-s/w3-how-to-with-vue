@@ -20,6 +20,7 @@ Vue.use(Router)
 const router = new Router({
   mode: 'hash',
   linkActiveClass: 'is-active',
+  scrollBehavior: () => ({ y: 0 }),
   routes
 })
 
