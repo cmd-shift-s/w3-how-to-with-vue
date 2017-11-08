@@ -1,6 +1,6 @@
 import SubPage from '@/layout/SubPage.vue'
-import IconBar from '@/pages/menus/IconBar.vue'
-import MenuIcon from '@/pages/menus/MenuIcon.vue'
+
+import menus from '@/pages/menus'
 
 const route = {
   path: '/menus',
@@ -10,12 +10,17 @@ const route = {
     {
       path: 'icon_bar',
       name: 'Icon Bar',
-      component: IconBar
+      component: menus.IconBar
     },
     {
       path: 'menu_icon',
       name: 'Menu Icon',
-      component: MenuIcon
+      component: menus.MenuIcon
+    },
+    {
+      path: 'accordion',
+      name: 'Accordion',
+      component: menus.Accordion
     }
   ]
 }

@@ -12,6 +12,10 @@
           <menu-icon></menu-icon>
           <p><router-link to="/menus/menu_icon" v-text="gotoBtn"></router-link></p>
         </div>
+        <div class="card">
+          <accordion></accordion>
+          <p><router-link to="/menus/accordion" v-text="gotoBtn"></router-link></p>
+        </div>
       </div>
     </div>
   </page>
