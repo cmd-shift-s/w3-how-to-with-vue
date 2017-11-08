@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion.vue button@click 1`] = `
+<div class="accordion is-active"><button></button>
+    <div class="panel"></div>
+</div>
+`;
+
+exports[`Accordion.vue props#has-icon 1`] = `
+<div class="accordion has-icon"><button></button>
+    <div class="panel"></div>
+</div>
+`;
+
+exports[`Accordion.vue props#is-animated 1`] = `
+<div class="accordion is-animated"><button></button>
+    <div class="panel"></div>
+</div>
+`;
+
+exports[`Accordion.vue props#title 1`] = `
+<div class="accordion"><button>Section 1</button>
+    <div class="panel"></div>
+</div>
+`;
+
+exports[`Accordion.vue render default 1`] = `
+<div class="accordion"><button></button>
+    <div class="panel"></div>
+</div>
+`;
