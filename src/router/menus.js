@@ -21,6 +21,11 @@ const route = {
       path: 'accordion',
       name: 'Accordion',
       component: menus.Accordion
+    },
+    {
+      path: 'tabs',
+      name: 'Tabs',
+      component: menus.Tabs
     }
   ]
 }

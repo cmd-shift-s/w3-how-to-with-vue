@@ -6,6 +6,10 @@
           <icon-bar></icon-bar>
           <p><router-link to="/menus/icon_bar" v-text="gotoBtn"></router-link></p>
         </div>
+        <div class="card">
+          <tabs></tabs>
+          <p><router-link to="/menus/tabs" v-text="gotoBtn"></router-link></p>
+        </div>
       </div>
       <div class="half">
         <div class="card">

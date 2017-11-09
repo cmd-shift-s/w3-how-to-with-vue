@@ -21,7 +21,7 @@ describe('MenuIcon.vue', () => {
     })
   })
 
-  it('props#is-animated', async () => {
+  it('props#is-animated', () => {
     const wrap = mount(MenuIcon, {
       propsData: {
         isAnimated: true
@@ -43,7 +43,7 @@ describe('MenuIcon.vue', () => {
     wrap.vm.$el.click()
 
     expect(wrap.vm.isChanged).toBe(true)
-    await wrap.vm.$nextTick()
+    wrap.update()
     expect(wrap.hasClass('change')).toBe(true)
 
     renderer.renderToString(wrap.vm, (err, str) => {

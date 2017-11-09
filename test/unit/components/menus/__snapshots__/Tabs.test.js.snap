@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs.vue render default 1`] = `
+<div class="tabs">
+    <div class="tabs-links"><button class="tab-link is-active">test</button></div>
+    <div id="test" class="tab-content">test content</div>
+</div>
+`;
+
+exports[`Tabs.vue tab-link@click 1`] = `
+<div class="tabs">
+    <div class="tabs-links"><button class="tab-link">test1</button><button class="tab-link is-active">test2</button></div>
+    <div>
+        <div id="test1" class="tab-content">test1 content</div>
+        <div id="test2" class="tab-content">test2 content</div>
+    </div>
+</div>
+`;
