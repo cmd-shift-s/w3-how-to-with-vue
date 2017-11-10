@@ -84,4 +84,46 @@ describe('Tabs.vue', () => {
       expect(str).toMatchSnapshot()
     })
   })
+
+  it('props#is-animated', () => {
+    const wrap = mount(Tabs, {
+      propsData: {
+        links: ['test'],
+        isAnimated: true
+      },
+      slots: {
+        default: '<div id="test" class="tab-content">test content</div>'
+      },
+      attachToDocument: true
+    })
+
+    expect(wrap.hasClass('tabs')).toBe(true)
+    expect(wrap.hasClass('is-animated')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
+
+  it('props#is-vertical', () => {
+    const wrap = mount(Tabs, {
+      propsData: {
+        links: ['test'],
+        isVertical: true
+      },
+      slots: {
+        default: '<div id="test" class="tab-content">test content</div>'
+      },
+      attachToDocument: true
+    })
+
+    expect(wrap.hasClass('tabs')).toBe(true)
+    expect(wrap.hasClass('is-vertical')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
 })

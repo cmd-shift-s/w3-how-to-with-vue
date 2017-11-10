@@ -1,11 +1,11 @@
 <template lang="html">
-  <div class="tabs" :class="{'is-animated': isAnimated}">
+  <div class="tabs" :class="{'is-animated': isAnimated, 'is-vertical': isVertical}">
     <div class="tabs-links">
       <button class="tab-link" :class="{'is-active': currentIndex === index}" v-for="(link, index) of links" @click="toggle($event, link, index)" :key="index" v-text="link"></button>
     </div>
-
-    <slot></slot>
-
+    <div class="tabs-contents">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -17,7 +17,8 @@ export default {
       type: Array,
       required: true
     },
-    isAnimated: Boolean
+    isAnimated: Boolean,
+    isVertical: Boolean
   },
   data() {
     return {
@@ -35,13 +36,12 @@ export default {
   methods: {
     toggle($event, link, index) {
       if (this.currentContentEl) {
-        // TODO 이전에 선택된 버튼의 is-active 제거
         this.currentContentEl.classList.remove('is-active')
       }
 
       $event.target.classList.add('is-active')
 
-      const content = document.getElementById(link)
+      const content = this.$el.querySelector(`#${link}`)
       content.classList.add('is-active')
 
       this.currentContentEl = content
@@ -56,6 +56,26 @@ export default {
   width: 100%;
   overflow: hidden;
   border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+
+  &.is-vertical {
+    flex-direction: row;
+
+    .tabs-links {
+      flex-direction: column;
+      min-width: 100px;
+      flex: 0.3;
+      border-right: 1px solid #ccc;
+
+      .tab-link {
+        text-align: left;
+      }
+    }
+    .tabs-contents {
+      flex: 1;
+    }
+  }
 
   .tabs-links {
     display: flex;
@@ -81,16 +101,18 @@ export default {
     }
   }
 
-  .tab-content {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
+  .tabs-contents {
+    .tab-content {
+      display: none;
+      padding: 6px 12px;
+      border-top: none;
 
-    &.is-active {
-      display: block;
+      &.is-active {
+        display: block;
+      }
     }
   }
-  
+
   &.is-animated {
     .tab-content {
       animation: fadeEffect 1s;
