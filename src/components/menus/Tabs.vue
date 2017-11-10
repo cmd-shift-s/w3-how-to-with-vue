@@ -67,6 +67,7 @@ export default {
       min-width: 100px;
       flex: 0.3;
       border-right: 1px solid #ccc;
+      border-bottom: none;
 
       .tab-link {
         text-align: left;
