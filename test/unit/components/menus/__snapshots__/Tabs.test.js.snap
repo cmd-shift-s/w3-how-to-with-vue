@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs.vue props#is-animated 1`] = `
-<div class="tabs is-animated">
+<div class="tabs is-animated is-top">
     <div class="tabs-links"><button class="tab-link is-active">test</button></div>
     <div class="tabs-contents">
         <div id="test" class="tab-content">test content</div>
@@ -9,8 +9,35 @@ exports[`Tabs.vue props#is-animated 1`] = `
 </div>
 `;
 
-exports[`Tabs.vue props#is-vertical 1`] = `
-<div class="tabs is-vertical">
+exports[`Tabs.vue props#position:bottom 1`] = `
+<div class="tabs is-bottom">
+    <div class="tabs-links"><button class="tab-link is-active">test</button></div>
+    <div class="tabs-contents">
+        <div id="test" class="tab-content">test content</div>
+    </div>
+</div>
+`;
+
+exports[`Tabs.vue props#position:left 1`] = `
+<div class="tabs is-left">
+    <div class="tabs-links"><button class="tab-link is-active">test</button></div>
+    <div class="tabs-contents">
+        <div id="test" class="tab-content">test content</div>
+    </div>
+</div>
+`;
+
+exports[`Tabs.vue props#position:right 1`] = `
+<div class="tabs is-right">
+    <div class="tabs-links"><button class="tab-link is-active">test</button></div>
+    <div class="tabs-contents">
+        <div id="test" class="tab-content">test content</div>
+    </div>
+</div>
+`;
+
+exports[`Tabs.vue props#position:top 1`] = `
+<div class="tabs is-top">
     <div class="tabs-links"><button class="tab-link is-active">test</button></div>
     <div class="tabs-contents">
         <div id="test" class="tab-content">test content</div>
@@ -19,7 +46,7 @@ exports[`Tabs.vue props#is-vertical 1`] = `
 `;
 
 exports[`Tabs.vue render default 1`] = `
-<div class="tabs">
+<div class="tabs is-top">
     <div class="tabs-links"><button class="tab-link is-active">test</button></div>
     <div class="tabs-contents">
         <div id="test" class="tab-content">test content</div>
@@ -28,7 +55,7 @@ exports[`Tabs.vue render default 1`] = `
 `;
 
 exports[`Tabs.vue tab-link@click 1`] = `
-<div class="tabs">
+<div class="tabs is-top">
     <div class="tabs-links"><button class="tab-link">test1</button><button class="tab-link is-active">test2</button></div>
     <div class="tabs-contents">
         <div>

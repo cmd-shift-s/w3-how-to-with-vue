@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="tabs" :class="{'is-animated': isAnimated, 'is-vertical': isVertical}">
+  <div class="tabs" :class="classes">
     <div class="tabs-links">
       <button class="tab-link" :class="{'is-active': isActive(link)}" v-for="link of links" @click="toggle($event, link)" :key="link" v-text="link"></button>
     </div>
@@ -18,11 +18,35 @@ export default {
       required: true
     },
     isAnimated: Boolean,
-    isVertical: Boolean
+    isExpanded: Boolean,
+    position: {
+      type: String,
+      default: 'top',
+      validator(val) {
+        return ['left', 'right', 'top', 'bottom'].some(_ => _ === val)
+      }
+    }
   },
   data() {
     return {
       currentLink: ''
+    }
+  },
+  computed: {
+    classes() {
+      const cx = []
+
+      if (this.isAnimated) {
+        cx.push('is-animated')
+      }
+
+      if (this.isExpanded) {
+        cx.push('is-expanded')
+      }
+
+      cx.push(`is-${this.position}`)
+
+      return cx
     }
   },
   mounted() {
@@ -42,8 +66,8 @@ export default {
           .classList.remove('is-active')
       }
 
-      const content = this.$el.querySelector(`#${link}`)
-      content.classList.add('is-active')
+      const $content = this.$el.querySelector(`#${link}`)
+      $content.classList.add('is-active')
 
       this.currentLink = link
     }
@@ -59,15 +83,13 @@ export default {
   display: flex;
   flex-direction: column;
 
-  &.is-vertical {
+  &.is-left, &.is-right {
     flex-direction: row;
 
     .tabs-links {
       flex-direction: column;
       min-width: 100px;
       flex: 0.3;
-      border-right: 1px solid #ccc;
-      border-bottom: none;
 
       .tab-link {
         text-align: left;
@@ -78,11 +100,45 @@ export default {
     }
   }
 
+  &.is-left {
+    .tabs-links {
+      border-right: 1px solid #ccc;
+    }
+  }
+
+  &.is-right {
+    flex-direction: row-reverse;
+
+    .tabs-links {
+      border-left: 1px solid #ccc;
+    }
+  }
+
+  &.is-top {
+    .tabs-links {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+  &.is-bottom {
+    flex-direction: column-reverse;
+
+    .tabs-links {
+      // border-top: 1px solid #ccc;
+    }
+  }
+
+  &.is-expanded {
+    .tabs-links {
+      .tab-link {
+        flex: 1;
+      }
+    }
+  }
+
   .tabs-links {
     display: flex;
     width: 100%;
     background-color: #f1f1f1;
-    border-bottom: 1px solid #ccc;
 
     .tab-link {
       background-color: inherit;

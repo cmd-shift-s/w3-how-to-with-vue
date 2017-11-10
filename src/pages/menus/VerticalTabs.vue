@@ -4,7 +4,7 @@
     intro="tabs with CSS and JavaScript">
     <sample>
       <tabs
-        is-vertical
+        position="left"
         is-animated
         :links="['London', 'Paris', 'Tokyo']">
         <div id="London" class="tab-content">

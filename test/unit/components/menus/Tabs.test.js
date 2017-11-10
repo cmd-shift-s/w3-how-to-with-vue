@@ -14,6 +14,7 @@ describe('Tabs.vue', () => {
     })
 
     expect(wrap.hasClass('tabs')).toBe(true)
+    expect(wrap.hasClass('is-top')).toBe(true)
     expect(wrap.vm.currentLink).toEqual('test')
 
     wrap.update()
@@ -110,11 +111,11 @@ describe('Tabs.vue', () => {
     })
   })
 
-  it('props#is-vertical', () => {
+  it('props#position:top', () => {
     const wrap = mount(Tabs, {
       propsData: {
         links: ['test'],
-        isVertical: true
+        position: 'top'
       },
       slots: {
         default: '<div id="test" class="tab-content">test content</div>'
@@ -123,7 +124,70 @@ describe('Tabs.vue', () => {
     })
 
     expect(wrap.hasClass('tabs')).toBe(true)
-    expect(wrap.hasClass('is-vertical')).toBe(true)
+    expect(wrap.hasClass('is-top')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
+
+  it('props#position:right', () => {
+    const wrap = mount(Tabs, {
+      propsData: {
+        links: ['test'],
+        position: 'right'
+      },
+      slots: {
+        default: '<div id="test" class="tab-content">test content</div>'
+      },
+      attachToDocument: true
+    })
+
+    expect(wrap.hasClass('tabs')).toBe(true)
+    expect(wrap.hasClass('is-right')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
+
+  it('props#position:bottom', () => {
+    const wrap = mount(Tabs, {
+      propsData: {
+        links: ['test'],
+        position: 'bottom'
+      },
+      slots: {
+        default: '<div id="test" class="tab-content">test content</div>'
+      },
+      attachToDocument: true
+    })
+
+    expect(wrap.hasClass('tabs')).toBe(true)
+    expect(wrap.hasClass('is-bottom')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
+
+  it('props#position:left', () => {
+    const wrap = mount(Tabs, {
+      propsData: {
+        links: ['test'],
+        position: 'left'
+      },
+      slots: {
+        default: '<div id="test" class="tab-content">test content</div>'
+      },
+      attachToDocument: true
+    })
+
+    expect(wrap.hasClass('tabs')).toBe(true)
+    expect(wrap.hasClass('is-left')).toBe(true)
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
