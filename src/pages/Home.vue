@@ -28,6 +28,10 @@
           <accordion></accordion>
           <p><router-link to="/menus/accordion" v-text="gotoBtn"></router-link></p>
         </div>
+        <div class="card">
+          <top-navigation></top-navigation>
+          <p><router-link to="/menus/top_navigation" v-text="gotoBtn"></router-link></p>
+        </div>
       </div>
     </div>
   </page>

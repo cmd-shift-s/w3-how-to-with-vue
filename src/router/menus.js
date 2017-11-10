@@ -36,6 +36,11 @@ const route = {
       path: 'tab_headers',
       name: 'Tab Headers',
       component: menus.TabHeaders
+    },
+    {
+      path: 'top_navigation',
+      name: 'Top Navigation',
+      component: menus.TopNavigation
     }
   ]
 }
