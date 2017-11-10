@@ -90,7 +90,7 @@ export default {
   z-index: 999;
 
   .menu-button {
-    padding: 9px 15px;
+    padding: 8px 15px;
     font-size: 22px;
     color: white;
 
