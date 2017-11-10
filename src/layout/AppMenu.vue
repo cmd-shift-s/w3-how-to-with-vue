@@ -9,6 +9,9 @@
       </a>
     </div>
     <aside ref="leftMenu" class="left-menu">
+      <a class="close" @click="closeMenu()">
+        <i class="fa fa-remove"></i>
+      </a>
       <div class="logos">
         <a href="https://github.com/gongzza/w3-how-to-with-vue" class="github" title="github">
           <i class="fa fa-github" aria-hidden="true"></i>
@@ -94,7 +97,7 @@ export default {
     font-size: 22px;
     color: white;
 
-    &:hover {
+    &:active {
       background-color: black;
     }
   }
@@ -125,6 +128,14 @@ export default {
   height: 100%;
   color: #000;
   background-color: #f1f1f1;
+  overflow: auto;
+
+  .close {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 195px;
+  }
 
   .logos {
     text-align: center;
@@ -178,6 +189,10 @@ export default {
     display: none;
 
     &.active {
+      display: inherit;
+    }
+
+    .close {
       display: inherit;
     }
   }
