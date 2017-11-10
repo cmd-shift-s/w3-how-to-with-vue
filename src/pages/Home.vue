@@ -32,6 +32,10 @@
           <top-navigation></top-navigation>
           <p><router-link to="/menus/top_navigation" v-text="gotoBtn"></router-link></p>
         </div>
+        <div class="card">
+          <responsive-topnav></responsive-topnav>
+          <p><router-link to="/menus/responsive_topnav" v-text="gotoBtn"></router-link></p>
+        </div>
       </div>
     </div>
   </page>

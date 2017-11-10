@@ -5,7 +5,8 @@ import Tabs from './Tabs.vue'
 import VerticalTabs from './VerticalTabs.vue'
 import TabHeaders from './TabHeaders.vue'
 import TopNavigation from './TopNavigation.vue'
+import ResponsiveTopnav from './ResponsiveTopnav.vue'
 
 export default {
-  IconBar, MenuIcon, Accordion, Tabs, VerticalTabs, TabHeaders, TopNavigation
+  IconBar, MenuIcon, Accordion, Tabs, VerticalTabs, TabHeaders, TopNavigation, ResponsiveTopnav
 }
