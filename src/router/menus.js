@@ -31,6 +31,11 @@ const route = {
       path: 'vertical_tabs',
       name: 'Vertical Tabs',
       component: menus.VerticalTabs
+    },
+    {
+      path: 'tab_headers',
+      name: 'Tab Headers',
+      component: menus.TabHeaders
     }
   ]
 }

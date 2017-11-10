@@ -14,6 +14,10 @@
           <vertical-tabs></vertical-tabs>
           <p><router-link to="/menus/vertical_tabs" v-text="gotoBtn"></router-link></p>
         </div>
+        <div class="card">
+          <tab-headers></tab-headers>
+          <p><router-link to="/menus/tab_headers" v-text="gotoBtn"></router-link></p>
+        </div>
       </div>
       <div class="half">
         <div class="card">
