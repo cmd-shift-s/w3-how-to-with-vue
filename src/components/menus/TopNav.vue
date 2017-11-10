@@ -14,11 +14,10 @@ export default {
 .top-nav {
   width: 100%;
   background-color: #333;
-  overflow: hidden;
+  overflow: auto;
+  display: flex;
 
   a {
-    float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
