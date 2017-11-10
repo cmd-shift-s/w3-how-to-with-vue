@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopNav.vue render default 1`] = `<nav class="top-nav"></nav>`;
+
+exports[`TopNav.vue slots#default 1`] = `<nav class="top-nav"><a>Test</a></nav>`;
