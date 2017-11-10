@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="tabs" :class="{'is-animated': isAnimated, 'is-vertical': isVertical}">
     <div class="tabs-links">
-      <button class="tab-link" :class="{'is-active': currentIndex === index}" v-for="(link, index) of links" @click="toggle($event, link, index)" :key="index" v-text="link"></button>
+      <button class="tab-link" :class="{'is-active': isActive(link)}" v-for="link of links" @click="toggle($event, link)" :key="link" v-text="link"></button>
     </div>
     <div class="tabs-contents">
       <slot></slot>
@@ -22,8 +22,7 @@ export default {
   },
   data() {
     return {
-      currentIndex: 0,
-      currentContentEl: null
+      currentLink: ''
     }
   },
   mounted() {
@@ -34,18 +33,19 @@ export default {
     }
   },
   methods: {
-    toggle($event, link, index) {
-      if (this.currentContentEl) {
-        this.currentContentEl.classList.remove('is-active')
+    isActive(link) {
+      return this.currentLink === link
+    },
+    toggle($event, link) {
+      if (this.currentLink) {
+        this.$el.querySelector(`#${this.currentLink}`)
+          .classList.remove('is-active')
       }
-
-      $event.target.classList.add('is-active')
 
       const content = this.$el.querySelector(`#${link}`)
       content.classList.add('is-active')
 
-      this.currentContentEl = content
-      this.currentIndex = index
+      this.currentLink = link
     }
   }
 }

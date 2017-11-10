@@ -14,7 +14,9 @@ describe('Tabs.vue', () => {
     })
 
     expect(wrap.hasClass('tabs')).toBe(true)
-    expect(wrap.vm.currentIndex).toEqual(0)
+    expect(wrap.vm.currentLink).toEqual('test')
+
+    wrap.update()
 
     expect(wrap.find('.tab-link').hasClass('is-active')).toBe(true)
 
@@ -47,7 +49,9 @@ describe('Tabs.vue', () => {
     })
 
     expect(wrap.hasClass('tabs')).toBe(true)
-    expect(wrap.vm.currentIndex).toEqual(0)
+    expect(wrap.vm.currentLink).toEqual('test1')
+
+    wrap.update()
 
     // 첫번째 버튼
     const $btn1 = wrap.find('.tab-link')
@@ -66,7 +70,7 @@ describe('Tabs.vue', () => {
     $btn2.element.click()
     wrap.update()
 
-    expect(wrap.vm.currentIndex).toEqual(1)
+    expect(wrap.vm.currentLink).toEqual('test2')
 
     expect($btn2.hasClass('is-active')).toBe(true)
 
