@@ -28,4 +28,30 @@ describe('TopNav.vue', () => {
       expect(str).toMatchSnapshot()
     })
   })
+
+  it('props#is-responsive', () => {
+    const wrap = mount(TopNav, {
+      propsData: {
+        isResponsive: true
+      }
+    })
+
+    expect(wrap.hasClass('top-nav')).toBe(true)
+    expect(wrap.hasClass('is-responsive')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+
+    wrap.vm.$el.querySelector('.toggle-menu').click()
+    wrap.update()
+
+    expect(wrap.hasClass('is-active')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
 })
