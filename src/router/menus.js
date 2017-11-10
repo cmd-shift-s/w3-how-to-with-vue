@@ -41,6 +41,10 @@ const route = {
       path: 'top_navigation',
       name: 'Top Navigation',
       component: menus.TopNavigation
+    },
+    {
+      path: 'responsive_top_navigation',
+      name: 'Responsive Topnav'
     }
   ]
 }
