@@ -10,3 +10,17 @@ hr {
   height: 0;
   overflow: visible;
 }
+
+.w3-btn {
+  background-color: #4CAF50;
+  cursor: pointer;
+  color: white;
+  border: none;
+  font-size: 1em;
+  padding: 8px 16px;
+  margin: 16px 0;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  }
+}
