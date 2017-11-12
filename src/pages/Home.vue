@@ -4,7 +4,7 @@
       <div class="half">
         <div class="card">
           <icon-bar></icon-bar>
-          <p><router-link to="/menus/icon_bar" v-text="gotoBtn"></router-link></p>
+          <p><router-link to="/menus/icon-bar" v-text="gotoBtn"></router-link></p>
         </div>
         <div class="card">
           <tabs></tabs>
@@ -12,17 +12,17 @@
         </div>
         <div class="card">
           <vertical-tabs></vertical-tabs>
-          <p><router-link to="/menus/vertical_tabs" v-text="gotoBtn"></router-link></p>
+          <p><router-link to="/menus/vertical-tabs" v-text="gotoBtn"></router-link></p>
         </div>
         <div class="card">
           <tab-headers></tab-headers>
-          <p><router-link to="/menus/tab_headers" v-text="gotoBtn"></router-link></p>
+          <p><router-link to="/menus/tab-headers" v-text="gotoBtn"></router-link></p>
         </div>
       </div>
       <div class="half">
         <div class="card">
           <menu-icon></menu-icon>
-          <p><router-link to="/menus/menu_icon" v-text="gotoBtn"></router-link></p>
+          <p><router-link to="/menus/menu-icon" v-text="gotoBtn"></router-link></p>
         </div>
         <div class="card">
           <accordion></accordion>
@@ -30,11 +30,15 @@
         </div>
         <div class="card">
           <top-navigation></top-navigation>
-          <p><router-link to="/menus/top_navigation" v-text="gotoBtn"></router-link></p>
+          <p><router-link to="/menus/top-navigation" v-text="gotoBtn"></router-link></p>
         </div>
         <div class="card">
           <responsive-topnav></responsive-topnav>
-          <p><router-link to="/menus/responsive_topnav" v-text="gotoBtn"></router-link></p>
+          <p><router-link to="/menus/responsive-topnav" v-text="gotoBtn"></router-link></p>
+        </div>
+        <div class="card">
+          <side-navigation></side-navigation>
+          <p><router-link to="/menus/side-navigation" v-text="gotoBtn"></router-link></p>
         </div>
       </div>
     </div>

@@ -8,12 +8,12 @@ const route = {
   component: SubPage,
   children: [
     {
-      path: 'icon_bar',
+      path: 'icon-bar',
       name: 'Icon Bar',
       component: menus.IconBar
     },
     {
-      path: 'menu_icon',
+      path: 'menu-icon',
       name: 'Menu Icon',
       component: menus.MenuIcon
     },
@@ -28,22 +28,22 @@ const route = {
       component: menus.Tabs
     },
     {
-      path: 'vertical_tabs',
+      path: 'vertical-tabs',
       name: 'Vertical Tabs',
       component: menus.VerticalTabs
     },
     {
-      path: 'tab_headers',
+      path: 'tab-headers',
       name: 'Tab Headers',
       component: menus.TabHeaders
     },
     {
-      path: 'top_navigation',
+      path: 'top-navigation',
       name: 'Top Navigation',
       component: menus.TopNavigation
     },
     {
-      path: 'responsive_topnav',
+      path: 'responsive-topnav',
       name: 'Responsive Topnav',
       component: menus.ResponsiveTopnav
     },
