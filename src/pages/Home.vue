@@ -2,50 +2,42 @@
   <page title="W3 How To">
     <div class="card-container">
       <div class="half">
-        <div class="card">
+        <card link="/menus/icon-bar">
           <icon-bar></icon-bar>
-          <p><router-link to="/menus/icon-bar" v-text="gotoBtn"></router-link></p>
-        </div>
-        <div class="card">
+        </card>
+        <card link="/menus/tabs">
           <tabs></tabs>
-          <p><router-link to="/menus/tabs" v-text="gotoBtn"></router-link></p>
-        </div>
-        <div class="card">
+        </card>
+        <card link="/menus/vertical-tabs">
           <vertical-tabs></vertical-tabs>
-          <p><router-link to="/menus/vertical-tabs" v-text="gotoBtn"></router-link></p>
-        </div>
-        <div class="card">
+        </card>
+        <card link="/menus/tab-headers">
           <tab-headers></tab-headers>
-          <p><router-link to="/menus/tab-headers" v-text="gotoBtn"></router-link></p>
-        </div>
+        </card>
       </div>
       <div class="half">
-        <div class="card">
+        <card link="/menus/menu-icon">
           <menu-icon></menu-icon>
-          <p><router-link to="/menus/menu-icon" v-text="gotoBtn"></router-link></p>
-        </div>
-        <div class="card">
+        </card>
+        <card link="/menus/accordion">
           <accordion></accordion>
-          <p><router-link to="/menus/accordion" v-text="gotoBtn"></router-link></p>
-        </div>
-        <div class="card">
+        </card>
+        <card link="/menus/top-navigation">
           <top-navigation></top-navigation>
-          <p><router-link to="/menus/top-navigation" v-text="gotoBtn"></router-link></p>
-        </div>
-        <div class="card">
+        </card>
+        <card link="/menus/responsive-topnav">
           <responsive-topnav></responsive-topnav>
-          <p><router-link to="/menus/responsive-topnav" v-text="gotoBtn"></router-link></p>
-        </div>
-        <div class="card">
+        </card>
+        <card link="/menus/side-navigation">
           <side-navigation></side-navigation>
-          <p><router-link to="/menus/side-navigation" v-text="gotoBtn"></router-link></p>
-        </div>
+        </card>
       </div>
     </div>
   </page>
 </template>
 
 <script>
+import Card from '../layout/Card.vue'
 // menus
 import menus from './menus'
 
@@ -57,6 +49,7 @@ export default {
     }
   },
   components: {
+    Card,
     ...menus
   }
 }
@@ -71,11 +64,6 @@ export default {
   .half {
     flex: 1;
   }
-}
-.card {
-  margin: 10px;
-  padding: 10px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media (max-width: 768px) {
