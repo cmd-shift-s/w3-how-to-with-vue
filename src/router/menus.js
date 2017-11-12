@@ -46,6 +46,11 @@ const route = {
       path: 'responsive_topnav',
       name: 'Responsive Topnav',
       component: menus.ResponsiveTopnav
+    },
+    {
+      path: 'side-navigation',
+      name: 'Side Navigation',
+      component: menus.SideNavigation
     }
   ]
 }
