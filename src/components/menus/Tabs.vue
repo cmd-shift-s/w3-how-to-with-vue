@@ -147,6 +147,7 @@ export default {
       cursor: pointer;
       padding: 14px 16px;
       transition: 0.3s;
+      margin: 0 0; // for safari
 
       &:hover {
         background-color: #ddd;

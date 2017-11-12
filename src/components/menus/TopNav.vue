@@ -54,7 +54,7 @@ export default {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
     cursor: pointer;
 
     &:hover {
@@ -79,6 +79,7 @@ export default {
       a:not(.is-active) {display: none;}
       .toggle-menu {
         float: right;
+        font-size: 1em;
         display: block !important;
       }
 
