@@ -4,25 +4,30 @@
     intro="an animated, closable side navigation menu">
     <side-nav
       :active.sync="samples[0].isActive"
+      selector=".container"
       is-animated>
       <a v-for="link of links" v-text="link"></a>
     </side-nav>
     <side-nav
-      :active.sync="samples[1].isActive">
+      :active.sync="samples[1].isActive"
+      selector=".container">
       <a v-for="link of links" v-text="link"></a>
     </side-nav>
     <side-nav
       :active.sync="samples[2].isActive"
+      selector=".container"
       is-animated push-content>
       <a v-for="link of links" v-text="link"></a>
     </side-nav>
     <side-nav
       :active.sync="samples[3].isActive"
+      selector=".container"
       is-animated push-content is-dimmed>
       <a v-for="link of links" v-text="link"></a>
     </side-nav>
     <side-nav
       :active.sync="samples[4].isActive"
+      selector=".container"
       is-animated width="100%" text-center>
       <a v-for="link of links" v-text="link"></a>
     </side-nav>

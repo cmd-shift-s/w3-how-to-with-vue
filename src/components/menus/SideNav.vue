@@ -15,6 +15,7 @@ export default {
     pushContent: Boolean,
     isDimmed: Boolean,
     textCenter: Boolean,
+    selector: String,
     width: {
       type: String,
       default: '250px',
@@ -25,17 +26,22 @@ export default {
   },
   data() {
     return {
-      parentMarginLeft: ''
+      contentMarginLeft: ''
+    }
+  },
+  computed: {
+    '$content'() {
+      return this.selector
+        ? document.querySelector(this.selector)
+        : this.$el.parentElement
     }
   },
   mounted() {
-    const $parent = this.$el.parentElement
-
     if (this.pushContent) {
       if (this.isAnimated) {
-        $parent.classList.add('pushable') // for animation
+        this.$content.classList.add('pushable') // for animation
       }
-      this.parentMarginLeft = $parent.style.marginLeft
+      this.contentMarginLeft = this.$content.style.marginLeft
     }
 
     if (this.isDimmed) {
@@ -56,10 +62,8 @@ export default {
       if (isActive) {
         this.$el.style.width = this.width
 
-        const $parent = this.$el.parentElement
-
         if (this.pushContent) {
-          $parent.style.marginLeft = this.width
+          this.$content.style.marginLeft = this.width
         }
 
         if (this.isDimmed) {
@@ -68,10 +72,8 @@ export default {
       } else {
         this.$el.style.width = '0'
 
-        const $parent = this.$el.parentElement
-
         if (this.pushContent) {
-          $parent.style.marginLeft = this.parentMarginLeft
+          this.$content.style.marginLeft = this.contentMarginLeft
         }
 
         if (this.isDimmed) {
