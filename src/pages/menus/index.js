@@ -10,7 +10,6 @@ import SideNavigation from './SideNavigation.vue'
 import FullscreenNavigation from './FullscreenNavigation.vue'
 
 export default {
-  FullscreenNavigation,
   IconBar,
   MenuIcon,
   Accordion,
@@ -19,5 +18,6 @@ export default {
   TabHeaders,
   TopNavigation,
   ResponsiveTopnav,
-  SideNavigation
+  SideNavigation,
+  FullscreenNavigation
 }
