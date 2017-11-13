@@ -13,6 +13,17 @@
         <menu-icon is-animated></menu-icon>
       </div>
     </sample>
+
+    <template slot="examples">
+    <hr>
+    <h5 class="step">Step 1) Add HTML:</h5>
+    <example-code :code="examples[0]"></example-code>
+    <h5 class="step">Step 2) Add CSS:</h5>
+    <example-code :code="examples[1]"></example-code>
+    <h3 class="explain">Example Explained</h3>
+    <p>The <code>width</code> and the <code>height</code> property specifies the width and height of each bar.</p>
+    <p>We have added a black <code>background-color</code>, and the top and bottom <code>margin</code> is used to create some distance between each bar.</p>
+    </template>
   </page>
 </template>
 
@@ -23,32 +34,19 @@ export default {
   data() {
     return {
       examples: [
-        {
-          step: 'Step 1) Add HTML:',
-          name: 'Example',
-          code: ['``` html',
-            '<div></div>',
-            '<div></div>',
-            '<div></div>',
-            '```'].join('\n')
-        },
-        {
-          step: 'Step 2) Add CSS:',
-          name: 'Example',
-          code: ['``` css',
-            'div {',
-            '  width: 35px;',
-            '  height: 5px;',
-            '  background-color: black;',
-            '  margin: 6px 0;',
-            '}',
-            '```'].join('\n'),
-          hide_hr: false,
-          explained: [
-            'The `width` and the `height` property specifies the width and height of each bar.',
-            'We have added a black `background-color`, and the top and bottom `margin` is used to create some distance between each bar.'
-          ].join('\n\n')
-        },
+        ['``` html',
+          '<div></div>',
+          '<div></div>',
+          '<div></div>',
+          '```'].join('\n'),
+        ['``` css',
+          'div {',
+          '  width: 35px;',
+          '  height: 5px;',
+          '  background-color: black;',
+          '  margin: 6px 0;',
+          '}',
+          '```'].join('\n'),
         {
           title: 'Animated Icon',
           subtitle: 'Use CSS and JavaScript to change the menu icon to a "cancel/remove" icon when it is clicked on:',

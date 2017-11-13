@@ -9,39 +9,26 @@
     </div>
 
     <slot></slot>
-
-    <div v-if="isShowExample">
-      <example v-for="(exam, index) of examples" :key="index"
-        :title="exam.title"
-        :subtitle="exam.subtitle"
-        :step="exam.step"
-        :name="exam.name"
-        :code="exam.code"
-        :hide-hr="exam.hide_hr"
-        :explained="exam.explained"
-      ></example>
+    
+    <div class="examples" v-if="isShowExample">
+      <slot name="examples"></slot>
     </div>
   </section>
 </template>
 
 <script>
-import Example from './Example.vue'
 export default {
   props: {
     title: {
       type: String,
       required: true
     },
-    intro: String,
-    examples: Array
+    intro: String
   },
   computed: {
     isShowExample() {
       return this.$route.path !== '/'
     }
-  },
-  components: {
-    Example
   }
 }
 </script>
