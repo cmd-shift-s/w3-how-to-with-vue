@@ -31,6 +31,9 @@
         <card link="/menus/side-navigation">
           <side-navigation></side-navigation>
         </card>
+        <card link="/menus/fullscreen-navigation">
+          <fullscreen-navigation></fullscreen-navigation>
+        </card>
       </div>
     </div>
   </page>

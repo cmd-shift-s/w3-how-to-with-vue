@@ -51,6 +51,11 @@ const route = {
       path: 'side-navigation',
       name: 'Side Navigation',
       component: menus.SideNavigation
+    },
+    {
+      path: 'fullscreen-navigation',
+      name: 'Fullscreen Navigation',
+      component: menus.FullscreenNavigation
     }
   ]
 }

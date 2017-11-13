@@ -7,8 +7,10 @@ import TabHeaders from './TabHeaders.vue'
 import TopNavigation from './TopNavigation.vue'
 import ResponsiveTopnav from './ResponsiveTopnav.vue'
 import SideNavigation from './SideNavigation.vue'
+import FullscreenNavigation from './FullscreenNavigation.vue'
 
 export default {
+  FullscreenNavigation,
   IconBar,
   MenuIcon,
   Accordion,
