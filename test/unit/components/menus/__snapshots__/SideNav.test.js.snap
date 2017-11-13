@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideNav.vue props#is-animated 1`] = `<div class="side-nav is-animated"> <a class="close-btn">×</a></div>`;
+
+exports[`SideNav.vue props#text-center 1`] = `<div class="side-nav has-text-centered"> <a class="close-btn">×</a></div>`;
+
+exports[`SideNav.vue render default 1`] = `<div class="side-nav"> <a class="close-btn">×</a></div>`;
