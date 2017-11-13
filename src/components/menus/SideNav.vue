@@ -1,8 +1,9 @@
 <template lang="html">
   <div class="side-nav" :class="{'is-animated': isAnimated, 'has-text-centered': textCenter}">
-    <slot></slot>
-
-    <a class="close-btn" @click="close()">&times;</a>
+    <div class="menus">
+      <slot></slot>
+      <a class="close-btn" @click="close()">&times;</a>
+    </div>
   </div>
 </template>
 
@@ -16,6 +17,13 @@ export default {
     isDimmed: Boolean,
     textCenter: Boolean,
     selector: String,
+    direction: {
+      type: String,
+      default: 'right',
+      validator(val) {
+        return ['right', 'down'].some(_ => _ === val)
+      }
+    },
     width: {
       type: String,
       default: '250px',
@@ -34,9 +42,18 @@ export default {
       return this.selector
         ? document.querySelector(this.selector)
         : this.$el.parentElement
+    },
+    isGoToRight() {
+      return this.direction === 'right'
     }
   },
   mounted() {
+    if (this.isGoToRight) {
+      this.$el.style.height = '100%'
+    } else {
+      this.$el.style.width = this.width
+    }
+
     if (this.pushContent) {
       if (this.isAnimated) {
         this.$content.classList.add('pushable') // for animation
@@ -60,7 +77,11 @@ export default {
   watch: {
     active(isActive) {
       if (isActive) {
-        this.$el.style.width = this.width
+        if (this.isGoToRight) {
+          this.$el.style.width = this.width
+        } else {
+          this.$el.style.height = '100%'
+        }
 
         if (this.pushContent) {
           this.$content.style.marginLeft = this.width
@@ -70,7 +91,11 @@ export default {
           this.dim.classList.add('dimmed')
         }
       } else {
-        this.$el.style.width = '0'
+        if (this.isGoToRight) {
+          this.$el.style.width = '0'
+        } else {
+          this.$el.style.height = '0'
+        }
 
         if (this.pushContent) {
           this.$content.style.marginLeft = this.contentMarginLeft
@@ -93,7 +118,7 @@ export default {
 
 <style lang="scss">
 .side-nav {
-  height: 100%; /* 100% Full-height */
+  height: 0; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 2; /* Stay on top */
@@ -101,7 +126,6 @@ export default {
   left: 0;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
 
   &.is-animated {
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -109,6 +133,10 @@ export default {
 
   &.has-text-centered {
     text-align: center;
+  }
+
+  .menus {
+    padding-top: 60px; /* Place content 60px from the top */
   }
 
   a {
