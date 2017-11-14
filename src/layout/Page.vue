@@ -1,15 +1,17 @@
 <template lang="html">
   <section class="page">
-    <h1 class="title"><span v-if="isShowExample">How TO - </span>{{title}}</h1>
-    <hr>
+    <h1 class="title" v-if="isShowExample"><span>How TO - </span>{{title}}</h1>
+    <h2 v-else>{{title}}</h2>
 
-    <div class="intro" v-if="isShowExample">
-      <p>Learn how to create {{intro}}.</p>
-      <hr>
-    </div>
+    <template v-if="isShowExample">
+    <hr>
+    <p>Learn how to create {{intro}}.</p>
+    <hr>
+    <slot name="header"></slot>
+    </template>
 
     <slot></slot>
-    
+
     <div class="examples" v-if="isShowExample">
       <slot name="examples"></slot>
     </div>
