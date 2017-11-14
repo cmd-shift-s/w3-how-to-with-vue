@@ -16,7 +16,7 @@
 
     <template slot="examples">
     <hr>
-    <h3 class="title">Create An Accordion</h3>
+    <h2 class="title">Create An Accordion</h2>
     <h5 class="step">Step 1) Add HTML:</h5>
     <example-code :code="examples[0]"></example-code>
     <h5 class="step">Step 2) Add CSS:</h5>
