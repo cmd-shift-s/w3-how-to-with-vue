@@ -3,6 +3,9 @@
     title="Menu Icon"
     intro="a menu icon with CSS"
     :examples="examples">
+
+    <h2>How To Create a Menu Icon</h2>
+    <p>If you are not using an icon library, you can create a basic menu icon with CSS:</p>
     <sample class="menu-icon-page">
       <div>
         <p>Menu Icon:</p>
