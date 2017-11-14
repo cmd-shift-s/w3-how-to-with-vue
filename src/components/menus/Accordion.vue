@@ -88,6 +88,7 @@ export default {
     text-align: left;
     border: none;
     outline: none;
+    margin: 0 0; // for safari
 
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     &:active, &:hover {
