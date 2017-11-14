@@ -21,9 +21,9 @@
 
     <template slot="examples">
     <hr>
-    <h5 class="step">Step 1) Add HTML:</h5>
+    <step no="1" html></step>
     <example-code :code="examples[0]"></example-code>
-    <h5 class="step">Step 2) Add CSS:</h5>
+    <step no="2" css></step>
     <example-code :code="examples[1]"></example-code>
     <h3 class="explain">Example Explained</h3>
     <p>The <code>width</code> and the <code>height</code> property specifies the width and height of each bar.</p>
@@ -32,11 +32,11 @@
     <hr>
     <h2 class="title">Animated Icon</h2>
     <p>Use CSS and JavaScript to change the menu icon to a "cancel/remove" icon when it is clicked on:</p>
-    <h5 class="step">Step 1) Add HTML:</h5>
+    <step no="1" html></step>
     <example-code :code="examples[2]"></example-code>
-    <h5 class="step">Step 2) Add CSS:</h5>
+    <step no="2" css></step>
     <example-code :code="examples[3]"></example-code>
-    <h5 class="step">Step 3) Add JavaScript:</h5>
+    <step no="3" js></step>
     <example-code :code="examples[4]"></example-code>
     <h3 class="explain">Example Explained</h3>
     <p>HTML &amp; CSS: We use the same styles as before, only this time, we wrap a container element around each &lt;div&gt; element and we specify a class name for each.</p>

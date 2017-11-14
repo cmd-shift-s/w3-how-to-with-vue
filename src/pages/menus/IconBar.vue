@@ -25,9 +25,9 @@
     <template slot="examples">
     <hr>
     <h2 class="title">How To Create An Icon Bar</h2>
-    <h5 class="step">Step 1) Add HTML:</h5>
+    <step no="1" html></step>
     <example-code :code="examples[0]"></example-code>
-    <h5 class="step">Step 2) Add CSS:</h5>
+    <step no="2" css></step>
     <example-code title="Vertical Example" :code="examples[1]"></example-code>
     <example-code title="Horizontal Example" :code="examples[2]"></example-code>
     </template>

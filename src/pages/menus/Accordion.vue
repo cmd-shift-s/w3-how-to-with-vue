@@ -18,11 +18,13 @@
     <hr>
     <h2 class="title">Create An Accordion</h2>
     <h5 class="step">Step 1) Add HTML:</h5>
+    <step no="1" html></step>
     <example-code :code="examples[0]"></example-code>
-    <h5 class="step">Step 2) Add CSS:</h5>
-    <p>Style the accordion:</p>
+    <step no="2" css>
+      <p>Style the accordion:</p>
+    </step>
     <example-code :code="examples[1]"></example-code>
-    <h5 class="step">Step 3) Add JavaScript:</h5>
+    <step no="3" js></step>
     <example-code :code="examples[2]"></example-code>
     <hr>
     <h3 class="title">Animated Accordion (Slide Down)</h3>
