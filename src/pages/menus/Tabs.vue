@@ -40,6 +40,18 @@
     <example-code :code="examples[1]"></example-code>
     <step no="3" js></step>
     <example-code :code="examples[2]"></example-code>
+    <hr>
+    <h2 class="title">Fade in Tabs:</h2>
+    <p>If you want to fade in the tab content, add the following CSS:</p>
+    <example-code :code="examples[3]"></example-code>
+    <hr>
+    <h2 class="title">Show a tab by default</h2>
+    <p>To open a specific tab on page load, use JavaScript to "click" on the specified tab button:</p>
+    <example-code :code="examples[4]"></example-code>
+    <hr>
+    <h2 class="title">Close a tab</h2>
+    <p>If you want to close a specific tab, use JavaScript to hide the tab with a click of a button:</p>
+    <example-code :code="examples[5]"></example-code>
     </template>
   </page>
 </template>
@@ -132,6 +144,39 @@ export default {
           '    document.getElementById(cityName).style.display = "block";',
           '    evt.currentTarget.className += " active";',
           '}',
+          '```'].join('\n'),
+        ['``` css',
+          '.tabcontent {',
+          '    -webkit-animation: fadeEffect 1s;',
+          '    animation: fadeEffect 1s; /* Fading effect takes 1 second */',
+          '}',
+          '',
+          '@-webkit-keyframes fadeEffect {',
+          '    from {opacity: 0;}',
+          '    to {opacity: 1;}',
+          '}',
+          '',
+          '@keyframes fadeEffect {',
+          '    from {opacity: 0;}',
+          '    to {opacity: 1;}',
+          '}',
+          '```'].join('\n'),
+        ['``` js',
+          '<button class="tablinks" onclick="openCity(event, \'London\')" id="defaultOpen">London</button>',
+          '',
+          '<script>',
+          '// Get the element with id="defaultOpen" and click on it',
+          'document.getElementById("defaultOpen").click();',
+          '</' + 'script>',
+          '```'].join('\n'),
+        ['``` html',
+          '<!-- Click on the <span> element to close the tab -->',
+          '',
+          '<div id="London" class="tabcontent">',
+          '  <h3>London</h3>',
+          '  <p>London is the capital city of England.</p>',
+          '  <span onclick="this.parentElement.style.display=\'none\'">x</span> ',
+          '</div>',
           '```'].join('\n')
       ]
     }
