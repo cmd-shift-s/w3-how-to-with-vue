@@ -38,6 +38,7 @@
 import SideNav from '@/components/menus/SideNav.vue'
 export default {
   name: 'off-canvas-menu-page',
+  menu: 'Off-Canvas Menu',
   data() {
     return {
       samples: [

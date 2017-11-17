@@ -10,7 +10,7 @@ function getPages(pages) {
   return Object.keys(pages).map(page => {
     const item = {
       path: page.replace(/([A-Z])/g, str => `-${str.toLowerCase()}`).substring(1),
-      name: page.replace(/([A-Z])/g, str => ` ${str}`).substring(1),
+      name: pages[page].menu || page.replace(/([A-Z])/g, str => ` ${str}`).substring(1),
       component: pages[page]
     }
     return item
