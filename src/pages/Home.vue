@@ -34,6 +34,9 @@
         <card link="/menus/fullscreen-navigation">
           <fullscreen-navigation></fullscreen-navigation>
         </card>
+        <card link="/menus/off-canvas-menu">
+          <off-canvas-menu></off-canvas-menu>
+        </card>
       </div>
     </div>
   </page>
