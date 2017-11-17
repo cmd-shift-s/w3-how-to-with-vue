@@ -8,6 +8,7 @@ import TopNavigation from './TopNavigation.vue'
 import ResponsiveTopnav from './ResponsiveTopnav.vue'
 import SideNavigation from './SideNavigation.vue'
 import FullscreenNavigation from './FullscreenNavigation.vue'
+import OffCanvasMenu from './OffCanvasMenu.vue'
 
 export default {
   IconBar,
@@ -19,5 +20,6 @@ export default {
   TopNavigation,
   ResponsiveTopnav,
   SideNavigation,
-  FullscreenNavigation
+  FullscreenNavigation,
+  OffCanvasMenu
 }
