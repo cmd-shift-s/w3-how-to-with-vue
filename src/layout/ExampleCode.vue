@@ -16,13 +16,16 @@ export default {
       default: 'Example'
     },
     code: {
-      type: String,
+      type: [String, Array],
       required: true
     }
   },
   computed: {
     compiledCode() {
-      return this.compileMarked(this.code)
+      const code = Array.isArray(this.code)
+        ? this.code.join('\n')
+        : this.code
+      return this.compileMarked(code)
     }
   },
   methods: {
@@ -49,7 +52,7 @@ export default {
 
     pre {
       margin: 0;
-      
+
       & > * {
         white-space: pre-wrap;
       }
