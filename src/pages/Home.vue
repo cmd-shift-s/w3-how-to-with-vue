@@ -72,6 +72,7 @@ export default {
 
   .half {
     flex: 1;
+    overflow: auto;
   }
 }
 
