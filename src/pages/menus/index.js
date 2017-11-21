@@ -10,6 +10,7 @@ import SideNavigation from './SideNavigation.vue'
 import FullscreenNavigation from './FullscreenNavigation.vue'
 import OffCanvasMenu from './OffCanvasMenu.vue'
 import HoverableSidenav from './HoverableSidenav.vue'
+import HorizontalScrollMenu from './HorizontalScrollMenu.vue'
 
 export default {
   IconBar,
@@ -23,5 +24,6 @@ export default {
   SideNavigation,
   FullscreenNavigation,
   OffCanvasMenu,
-  HoverableSidenav
+  HoverableSidenav,
+  HorizontalScrollMenu
 }

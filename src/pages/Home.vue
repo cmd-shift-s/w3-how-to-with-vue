@@ -14,6 +14,9 @@
         <card link="/menus/tab-headers">
           <tab-headers></tab-headers>
         </card>
+        <card link="/menus/horizontal-scroll-menu">
+          <horizontal-scroll-menu></horizontal-scroll-menu>
+        </card>
       </div>
       <div class="half">
         <card link="/menus/menu-icon">
