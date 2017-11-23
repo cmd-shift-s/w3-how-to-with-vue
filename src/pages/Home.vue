@@ -55,6 +55,9 @@
         <card link="/menus/bottom-navigation">
           <bottom-navigation></bottom-navigation>
         </card>
+        <card link="/menus/fixed-menu">
+          <fixed-menu></fixed-menu>
+        </card>
       </div>
     </div>
   </page>
@@ -67,11 +70,6 @@ import menus from './menus'
 
 export default {
   name: 'home',
-  computed: {
-    gotoBtn() {
-      return 'Learn How To'
-    }
-  },
   components: {
     Card,
     ...menus

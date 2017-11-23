@@ -15,6 +15,7 @@ import VerticalMenu from './VerticalMenu.vue'
 import BottomNavigation from './BottomNavigation.vue'
 import ResponsiveBottomNavigation from './ResponsiveBottomNavigation.vue'
 import BottomBorderNavLinks from './BottomBorderNavLinks.vue'
+import FixedMenu from './FixedMenu.vue'
 
 export default {
   IconBar,
@@ -33,5 +34,6 @@ export default {
   VerticalMenu,
   BottomNavigation,
   ResponsiveBottomNavigation,
-  BottomBorderNavLinks
+  BottomBorderNavLinks,
+  FixedMenu
 }
