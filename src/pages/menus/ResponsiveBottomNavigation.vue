@@ -1,10 +1,11 @@
 <template lang="html">
   <page
-    title="Bottom Navigation"
-    intro="a bottom navigation menu with CSS">
+    title="Responsive Bottom Navigation"
+    intro="a responsive bottom navigation menu with CSS and JavaScript">
 
     <template slot="header">
-    <h2 class="title">Bottom Navigation Menu</h2>
+    <h2 class="title">Responsive Bottom Navigation</h2>
+    <p><b>Resize</b> the browser window to see how the responsive navigation menu works:</p>
     </template>
 
     <sample class="responsive-bottom-navigation-page">
@@ -12,18 +13,24 @@
         <a :class="{'is-active': link === currentLink}" v-for="link of links" @click="currentLink = link" v-text="link"></a>
       </top-nav>
       <div class="sample-contents">
-        <h1>Bottom Navigation Bar</h1>
-        <p>Some text some text some text.</p>
+        <h1>Responsive Bottom Navbar Example</h1>
+        <p>Resize the browser window to see how it works.</p>
       </div>
     </sample>
 
     <template slot="examples">
     <hr>
-    <h2 class="title">Create A Bottom Navigation Menu</h2>
+    <h2 class="title">Create A Responsive Bottom Navbar</h2>
     <step no="1" html></step>
     <example-code :code="examples[0]"></example-code>
+    <p>The link with class="icon" is used to open and close the navbar on small screens.</p>
     <step no="2" css></step>
     <example-code :code="examples[1]"></example-code>
+    <p>Add media queries:</p>
+    <example-code :code="examples[2]"></example-code>
+    <hr>
+    <step no="3" js></step>
+    <example-code :code="examples[3]"></example-code>
     </template>
 
   </page>
@@ -44,10 +51,12 @@ export default {
       examples: [
         [
           '``` html',
-          '<div class="navbar">',
-          '  <a href="#home" class="active">Home</a>',
+          '<div class="navbar" id="myNavbar">',
+          '  <a href="#home">Home</a>',
           '  <a href="#news">News</a>',
           '  <a href="#contact">Contact</a>',
+          '  <a href="#about">About</a>',
+          '  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>',
           '</div>',
           '```'
         ],
@@ -79,10 +88,54 @@ export default {
           '  color: black;',
           '}',
           '',
-          '/* Add a color to the active/current link */',
+          '/* Add a green background color to the active link */',
           '.navbar a.active {',
           '  background-color: #4CAF50;',
           '  color: white;',
+          '}',
+          '',
+          '/* Hide the link that should open and close the navbar on small screens */',
+          '.navbar .icon {',
+          '  display: none;',
+          '}',
+          '```'
+        ],
+        [
+          '``` css',
+          '/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */',
+          '@media screen and (max-width: 600px) {',
+          '  .navbar a:not(:first-child) {display: none;}',
+          '  .navbar a.icon {',
+          '    float: right;',
+          '    display: block;',
+          '  }',
+          '}',
+          '',
+          '/* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */',
+          '@media screen and (max-width: 600px) {',
+          '  .navbar.responsive a.icon {',
+          '    position: absolute;',
+          '    right: 0;',
+          '    bottom: 0;',
+          '  }',
+          '  .navbar.responsive a {',
+          '    float: none;',
+          '    display: block;',
+          '    text-align: left;',
+          '  }',
+          '}',
+          '```'
+        ],
+        [
+          '``` js',
+          '/* Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon */',
+          'function myFunction() {',
+          '  var x = document.getElementById("myNavbar");',
+          '  if (x.className === "navbar") {',
+          '    x.className += " responsive";',
+          '  } else {',
+          '    x.className = "navbar";',
+          '  }',
           '}',
           '```'
         ]
