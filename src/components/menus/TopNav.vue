@@ -43,7 +43,6 @@ export default {
   display: flex;
 
   &.is-responsive {
-    display: block;
 
     a {
       float: left;
@@ -82,7 +81,9 @@ export default {
 
 @media (max-width: 768px) {
   .top-nav {
-     &.is-responsive {
+    &.is-responsive {
+      display: block;
+       
       a:not(.is-active) {display: none;}
       .toggle-menu {
         float: right;
