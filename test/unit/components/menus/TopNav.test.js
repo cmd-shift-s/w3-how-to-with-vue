@@ -54,4 +54,20 @@ describe('TopNav.vue', () => {
       expect(str).toMatchSnapshot()
     })
   })
+
+  it('props#is-bottom', () => {
+    const wrap = mount(TopNav, {
+      propsData: {
+        isBottom: true
+      }
+    })
+
+    expect(wrap.hasClass('top-nav')).toBe(true)
+    expect(wrap.hasClass('is-bottom')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
 })

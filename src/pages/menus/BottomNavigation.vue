@@ -8,13 +8,13 @@
     </template>
 
     <sample class="bottom-navigation-page">
+      <top-nav is-bottom>
+        <a :class="{'is-active': link === currentLink}" v-for="link of links" @click="currentLink = link" v-text="link"></a>
+      </top-nav>
       <div class="sample-contents">
         <h1>Bottom Navigation Bar</h1>
         <p>Some text some text some text.</p>
       </div>
-      <top-nav>
-        <a :class="{'is-active': link === currentLink}" v-for="link of links" @click="currentLink = link" v-text="link"></a>
-      </top-nav>
     </sample>
 
     <template slot="examples">
@@ -102,10 +102,10 @@ export default {
   flex-direction: column;
   border: 3px solid #f1f1f1;
   height: 300px;
+  position: relative;
 
   .sample-contents {
     padding: 16px 16px 0;
-    height: calc(100% - 60px);
   }
 }
 </style>

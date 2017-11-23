@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TopNav.vue props#is-bottom 1`] = `
+<nav class="top-nav is-bottom">
+    <!---->
+</nav>
+`;
+
 exports[`TopNav.vue props#is-responsive 1`] = `<nav class="top-nav is-responsive"> <a class="toggle-menu">☰</a></nav>`;
 
 exports[`TopNav.vue props#is-responsive 2`] = `<nav class="top-nav is-responsive is-active"> <a class="toggle-menu">☰</a></nav>`;

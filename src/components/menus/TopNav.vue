@@ -10,7 +10,8 @@
 export default {
   name: 'top-nav',
   props: {
-    isResponsive: Boolean
+    isResponsive: Boolean,
+    isBottom: Boolean
   },
   data() {
     return {
@@ -22,6 +23,7 @@ export default {
       const cx = []
       if (this.isResponsive) cx.push('is-responsive')
       if (this.isActive) cx.push('is-active')
+      if (this.isBottom) cx.push('is-bottom')
       return cx
     }
   },
@@ -46,6 +48,11 @@ export default {
     a {
       float: left;
     }
+  }
+
+  &.is-bottom {
+    position: absolute !important;
+    bottom: 0;
   }
 
   a {
@@ -86,11 +93,19 @@ export default {
       &.is-active {
         position: relative;
 
+        &.is-bottom {
+          .toggle-menu {
+            bottom: 0;
+            top: unset;
+          }
+        }
+
         .toggle-menu {
           position: absolute;
           right: 0;
           top: 0;
         }
+
         a {
           float: none;
           display: block;
