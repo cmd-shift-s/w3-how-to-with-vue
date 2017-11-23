@@ -20,6 +20,9 @@
         <card link="/menus/vertical-menu">
           <vertical-menu></vertical-menu>
         </card>
+        <card link="/menus/responsive-bottom-navigation">
+          <responsive-bottom-navigation></responsive-bottom-navigation>
+        </card>
       </div>
       <div class="half">
         <card link="/menus/menu-icon">
@@ -39,6 +42,9 @@
         </card>
         <card link="/menus/fullscreen-navigation">
           <fullscreen-navigation></fullscreen-navigation>
+        </card>
+        <card link="/menus/hoverable-sidenav">
+          <hoverable-sidenav></hoverable-sidenav>
         </card>
         <card link="/menus/off-canvas-menu">
           <off-canvas-menu></off-canvas-menu>

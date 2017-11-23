@@ -13,6 +13,7 @@ import HoverableSidenav from './HoverableSidenav.vue'
 import HorizontalScrollMenu from './HorizontalScrollMenu.vue'
 import VerticalMenu from './VerticalMenu.vue'
 import BottomNavigation from './BottomNavigation.vue'
+import ResponsiveBottomNavigation from './ResponsiveBottomNavigation.vue'
 
 export default {
   IconBar,
@@ -29,5 +30,6 @@ export default {
   HoverableSidenav,
   HorizontalScrollMenu,
   VerticalMenu,
-  BottomNavigation
+  BottomNavigation,
+  ResponsiveBottomNavigation
 }
