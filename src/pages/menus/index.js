@@ -12,6 +12,7 @@ import OffCanvasMenu from './OffCanvasMenu.vue'
 import HoverableSidenav from './HoverableSidenav.vue'
 import HorizontalScrollMenu from './HorizontalScrollMenu.vue'
 import VerticalMenu from './VerticalMenu.vue'
+import BottomNavigation from './BottomNavigation.vue'
 
 export default {
   IconBar,
@@ -27,5 +28,6 @@ export default {
   OffCanvasMenu,
   HoverableSidenav,
   HorizontalScrollMenu,
-  VerticalMenu
+  VerticalMenu,
+  BottomNavigation
 }
