@@ -83,6 +83,8 @@ export default {
 </script>
 
 <style lang="scss">
+$menu-z-index: 10;
+
 .top-menu {
   display: none;
   position: fixed;
@@ -90,6 +92,7 @@ export default {
   background-color: #5f5f5f;
   width: 100%;
   height: 45px;
+  z-index: $menu-z-index;
   box-shadow:
     0 2px 5px 0 rgba(0,0,0,0.16),
     0 2px 10px 0 rgba(0,0,0,0.12);
@@ -131,6 +134,7 @@ export default {
   color: #000;
   background-color: #f1f1f1;
   overflow: auto;
+  z-index: $menu-z-index;
 
   .close {
     display: none;
