@@ -15,7 +15,7 @@
     <h2 class="title">How To Create a Vertical Button Group</h2>
     <step no="1" html></step>
     <example-code :code="examples[0]"></example-code>
-    <step no="1" css></step>
+    <step no="2" css></step>
     <example-code :code="examples[1]"></example-code>
     <hr>
     <h2 class="title">Vertical Scroll Menu</h2>
