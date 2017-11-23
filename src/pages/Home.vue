@@ -23,6 +23,9 @@
         <card link="/menus/responsive-bottom-navigation">
           <responsive-bottom-navigation></responsive-bottom-navigation>
         </card>
+        <card link="/menus/bottom-border-nav-links">
+          <bottom-border-nav-links></bottom-border-nav-links>
+        </card>
       </div>
       <div class="half">
         <card link="/menus/menu-icon">

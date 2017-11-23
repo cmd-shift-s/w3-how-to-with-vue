@@ -14,6 +14,7 @@ import HorizontalScrollMenu from './HorizontalScrollMenu.vue'
 import VerticalMenu from './VerticalMenu.vue'
 import BottomNavigation from './BottomNavigation.vue'
 import ResponsiveBottomNavigation from './ResponsiveBottomNavigation.vue'
+import BottomBorderNavLinks from './BottomBorderNavLinks.vue'
 
 export default {
   IconBar,
@@ -31,5 +32,6 @@ export default {
   HorizontalScrollMenu,
   VerticalMenu,
   BottomNavigation,
-  ResponsiveBottomNavigation
+  ResponsiveBottomNavigation,
+  BottomBorderNavLinks
 }
