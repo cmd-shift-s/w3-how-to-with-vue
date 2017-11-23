@@ -23,7 +23,7 @@ export default {
     transition: 0.3s; /* Add transition on hover */
     padding: 15px; /* 15px padding */
     margin: 5px 0;
-    margin-left: -80px;
+    margin-left: -90px;
     width: 100px; /* Set a specific width */
     text-decoration: none; /* Remove underline */
     font-size: 20px; /* Increase font size */
