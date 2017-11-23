@@ -17,6 +17,9 @@
         <card link="/menus/horizontal-scroll-menu">
           <horizontal-scroll-menu></horizontal-scroll-menu>
         </card>
+        <card link="/menus/vertical-menu">
+          <vertical-menu></vertical-menu>
+        </card>
       </div>
       <div class="half">
         <card link="/menus/menu-icon">
@@ -39,6 +42,9 @@
         </card>
         <card link="/menus/off-canvas-menu">
           <off-canvas-menu></off-canvas-menu>
+        </card>
+        <card link="/menus/bottom-navigation">
+          <bottom-navigation></bottom-navigation>
         </card>
       </div>
     </div>
