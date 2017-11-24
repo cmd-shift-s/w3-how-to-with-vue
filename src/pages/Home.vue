@@ -2,62 +2,18 @@
   <page title="W3 How To">
     <div class="card-container">
       <div class="half">
-        <card link="/menus/icon-bar">
-          <icon-bar></icon-bar>
-        </card>
-        <card link="/menus/tabs">
-          <tabs></tabs>
-        </card>
-        <card link="/menus/vertical-tabs">
-          <vertical-tabs></vertical-tabs>
-        </card>
-        <card link="/menus/tab-headers">
-          <tab-headers></tab-headers>
-        </card>
-        <card link="/menus/horizontal-scroll-menu">
-          <horizontal-scroll-menu></horizontal-scroll-menu>
-        </card>
-        <card link="/menus/vertical-menu">
-          <vertical-menu></vertical-menu>
-        </card>
-        <card link="/menus/responsive-bottom-navigation">
-          <responsive-bottom-navigation></responsive-bottom-navigation>
-        </card>
-        <card link="/menus/bottom-border-nav-links">
-          <bottom-border-nav-links></bottom-border-nav-links>
-        </card>
+        <template v-for="route of routes1">
+          <card v-for="page of route.children" :link="`${route.path}/${page.path}`" :key="page.path">
+            <div :is="page.component"></div>
+          </card>
+        </template>
       </div>
       <div class="half">
-        <card link="/menus/menu-icon">
-          <menu-icon></menu-icon>
-        </card>
-        <card link="/menus/accordion">
-          <accordion></accordion>
-        </card>
-        <card link="/menus/top-navigation">
-          <top-navigation></top-navigation>
-        </card>
-        <card link="/menus/responsive-topnav">
-          <responsive-topnav></responsive-topnav>
-        </card>
-        <card link="/menus/side-navigation">
-          <side-navigation></side-navigation>
-        </card>
-        <card link="/menus/fullscreen-navigation">
-          <fullscreen-navigation></fullscreen-navigation>
-        </card>
-        <card link="/menus/hoverable-sidenav">
-          <hoverable-sidenav></hoverable-sidenav>
-        </card>
-        <card link="/menus/off-canvas-menu">
-          <off-canvas-menu></off-canvas-menu>
-        </card>
-        <card link="/menus/bottom-navigation">
-          <bottom-navigation></bottom-navigation>
-        </card>
-        <card link="/menus/fixed-menu">
-          <fixed-menu></fixed-menu>
-        </card>
+        <template v-for="route of routes2">
+          <card v-for="page of route.children" :link="`${route.path}/${page.path}`" :key="page.path">
+            <div :is="page.component"></div>
+          </card>
+        </template>
       </div>
     </div>
   </page>
@@ -65,14 +21,36 @@
 
 <script>
 import Card from '../layout/Card.vue'
-// menus
-import menus from './menus'
+import {routes} from '@/router'
 
 export default {
   name: 'home',
+  data() {
+    return {
+      routes1: [],
+      routes2: []
+    }
+  },
+  created() {
+    const _routes = routes.slice(1) // remove home
+    _routes.forEach(route => {
+      const children1 = []
+      const children2 = []
+
+      route.children.forEach((page, index) => {
+        if (index % 2 === 0) {
+          children1.push(page)
+        } else {
+          children2.push(page)
+        }
+      })
+
+      this.routes1.push(Object.assign({}, route, {children: children1}))
+      this.routes2.push(Object.assign({}, route, {children: children2}))
+    })
+  },
   components: {
-    Card,
-    ...menus
+    Card
   }
 }
 </script>
