@@ -121,7 +121,7 @@ export default {
   height: 0; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 2; /* Stay on top */
+  z-index: 12; /* Stay on top */
   top: 0;
   left: 0;
   background-color: #111; /* Black*/
@@ -167,7 +167,7 @@ export default {
 .dimmable {
   width: 0;
   height: 100%;
-  z-index: 1;
+  z-index: 11;
   position: fixed;
   top: 0;
   left: 0;
