@@ -16,6 +16,7 @@ import BottomNavigation from './BottomNavigation.vue'
 import ResponsiveBottomNavigation from './ResponsiveBottomNavigation.vue'
 import BottomBorderNavLinks from './BottomBorderNavLinks.vue'
 import FixedMenu from './FixedMenu.vue'
+import SlideDownBarOnScroll from './SlideDownBarOnScroll.vue'
 
 export default {
   IconBar,
@@ -35,5 +36,6 @@ export default {
   BottomNavigation,
   ResponsiveBottomNavigation,
   BottomBorderNavLinks,
-  FixedMenu
+  FixedMenu,
+  SlideDownBarOnScroll
 }
