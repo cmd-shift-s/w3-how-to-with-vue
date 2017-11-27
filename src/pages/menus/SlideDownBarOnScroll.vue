@@ -4,11 +4,9 @@
     intro="slide down a navigation bar on scroll with CSS and JavaScript">
 
     <sample class="slide-down-bar-on-scroll-page">
-      <!-- <transition name="topnav" appear v-if="isActive"> -->
-        <top-nav :class="{'is-active': isActive}">
-          <a :class="{'is-active': link === currentLink}" v-for="link of links" @click="currentLink = link" v-text="link"></a>
-        </top-nav>
-      <!-- </transition> -->
+      <top-nav :class="{'is-active': isActive}">
+        <a :class="{'is-active': link === currentLink}" v-for="link of links" @click="currentLink = link" v-text="link"></a>
+      </top-nav>
       <div class="sample-contents">
         <h1>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</h1>
         <h2>Scroll down this frame to see the effect!</h2>
@@ -129,7 +127,7 @@ export default {
   .top-nav {
     position: absolute;
     transition: top .35s;
-    top: -50px;
+    top: -55px;
 
     &.is-active {
       top: 0;
