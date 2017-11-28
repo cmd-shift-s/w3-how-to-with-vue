@@ -1,23 +1,23 @@
-import IconBar from './IconBar.vue'
-import MenuIcon from './MenuIcon.vue'
-import Accordion from './Accordion.vue'
-import Tabs from './Tabs.vue'
-import VerticalTabs from './VerticalTabs.vue'
-import TabHeaders from './TabHeaders.vue'
-import TopNavigation from './TopNavigation.vue'
-import ResponsiveTopnav from './ResponsiveTopnav.vue'
-import SideNavigation from './SideNavigation.vue'
-import FullscreenNavigation from './FullscreenNavigation.vue'
-import OffCanvasMenu from './OffCanvasMenu.vue'
-import HoverableSidenav from './HoverableSidenav.vue'
-import HorizontalScrollMenu from './HorizontalScrollMenu.vue'
-import VerticalMenu from './VerticalMenu.vue'
-import BottomNavigation from './BottomNavigation.vue'
-import ResponsiveBottomNavigation from './ResponsiveBottomNavigation.vue'
-import BottomBorderNavLinks from './BottomBorderNavLinks.vue'
-import FixedMenu from './FixedMenu.vue'
-import SlideDownBarOnScroll from './SlideDownBarOnScroll.vue'
-import StickyNavbar from './StickyNavbar.vue'
+const IconBar = () => import(/* webpackChunkName: "pages/menus/IconBar" */ './IconBar.vue')
+const MenuIcon = () => import(/* webpackChunkName: "pages/menus/MenuIcon" */ './MenuIcon.vue')
+const Accordion = () => import(/* webpackChunkName: "pages/menus/Accordion" */ './Accordion.vue')
+const Tabs = () => import(/* webpackChunkName: "pages/menus/Tabs" */ './Tabs.vue')
+const VerticalTabs = () => import(/* webpackChunkName: "pages/menus/VerticalTabs" */ './VerticalTabs.vue')
+const TabHeaders = () => import(/* webpackChunkName: "pages/menus/TabHeaders" */ './TabHeaders.vue')
+const TopNavigation = () => import(/* webpackChunkName: "pages/menus/TopNavigation" */ './TopNavigation.vue')
+const ResponsiveTopnav = () => import(/* webpackChunkName: "pages/menus/ResponsiveTopnav" */ './ResponsiveTopnav.vue')
+const SideNavigation = () => import(/* webpackChunkName: "pages/menus/SideNavigation" */ './SideNavigation.vue')
+const FullscreenNavigation = () => import(/* webpackChunkName: "pages/menus/FullscreenNavigation" */ './FullscreenNavigation.vue')
+const OffCanvasMenu = () => import(/* webpackChunkName: "pages/menus/OffCanvasMenu" */ './OffCanvasMenu.vue')
+const HoverableSidenav = () => import(/* webpackChunkName: "pages/menus/HoverableSidenav" */ './HoverableSidenav.vue')
+const HorizontalScrollMenu = () => import(/* webpackChunkName: "pages/menus/HorizontalScrollMenu" */ './HorizontalScrollMenu.vue')
+const VerticalMenu = () => import(/* webpackChunkName: "pages/menus/VerticalMenu" */ './VerticalMenu.vue')
+const BottomNavigation = () => import(/* webpackChunkName: "pages/menus/BottomNavigation" */ './BottomNavigation.vue')
+const ResponsiveBottomNavigation = () => import(/* webpackChunkName: "pages/menus/ResponsiveBottomNavigation" */ './ResponsiveBottomNavigation.vue')
+const BottomBorderNavLinks = () => import(/* webpackChunkName: "pages/menus/BottomBorderNavLinks" */ './BottomBorderNavLinks.vue')
+const FixedMenu = () => import(/* webpackChunkName: "pages/menus/FixedMenu" */ './FixedMenu.vue')
+const SlideDownBarOnScroll = () => import(/* webpackChunkName: "pages/menus/SlideDownBarOnScroll" */ './SlideDownBarOnScroll.vue')
+const StickyNavbar = () => import(/* webpackChunkName: "pages/menus/StickyNavbar" */ './StickyNavbar.vue')
 
 export default {
   IconBar,

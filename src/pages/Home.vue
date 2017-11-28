@@ -3,16 +3,12 @@
     <div class="card-container">
       <div class="half">
         <template v-for="route of routes1">
-          <card v-for="page of route.children" :link="`${route.path}/${page.path}`" :key="page.path">
-            <div :is="page.component"></div>
-          </card>
+          <card v-for="page of route.children" :link="`${route.path}/${page.path}`" :key="page.path" :page="page.component" is-lazy></card>
         </template>
       </div>
       <div class="half">
         <template v-for="route of routes2">
-          <card v-for="page of route.children" :link="`${route.path}/${page.path}`" :key="page.path">
-            <div :is="page.component"></div>
-          </card>
+          <card v-for="page of route.children" :link="`${route.path}/${page.path}`" :key="page.path" :page="page.component" is-lazy></card>
         </template>
       </div>
     </div>
@@ -63,7 +59,6 @@ export default {
 
   .half {
     flex: 1;
-    overflow: auto;
   }
 }
 

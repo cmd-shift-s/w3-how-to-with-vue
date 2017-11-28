@@ -11,6 +11,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '',
+    chunkFilename: isProduction
+      ? 'js/[name].[chunkhash:7].js'
+      : 'js/[name].js',
     filename: isProduction
       ? 'js/[name].[chunkhash:7].js'
       : 'js/[name].js'
