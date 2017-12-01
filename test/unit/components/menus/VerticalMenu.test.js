@@ -1,4 +1,4 @@
-import {mount, renderer} from '#/unit/utils'
+import { mount, renderer } from '#/unit/utils'
 import VerticalMenu from '@/components/menus/VerticalMenu.vue'
 
 describe('VerticalMenu.vue', () => {

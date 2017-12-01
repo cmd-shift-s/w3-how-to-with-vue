@@ -27,10 +27,23 @@ export default {
     return {
       currentLink: '',
       links: [
-        'Home', 'News', 'Contact', 'About', 'Support', 'Blog', 'Custom', 'More', 'Logo', 'Friends', 'Partners', 'Poeple', 'Work'
+        'Home',
+        'News',
+        'Contact',
+        'About',
+        'Support',
+        'Blog',
+        'Custom',
+        'More',
+        'Logo',
+        'Friends',
+        'Partners',
+        'Poeple',
+        'Work'
       ],
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<div class="scrollmenu">',
           '  <a href="#home">Home</a>',
           '  <a href="#news">News</a>',
@@ -38,8 +51,10 @@ export default {
           '  <a href="#about">About</a>',
           '  ...',
           '</div>',
-          '```'],
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           'div.scrollmenu {',
           '  background-color: #333;',
           '  overflow: auto;',
@@ -57,7 +72,8 @@ export default {
           'div.scrollmenu a:hover {',
           '  background-color: #777;',
           '}',
-          '```']
+          '```'
+        ]
       ]
     }
   },

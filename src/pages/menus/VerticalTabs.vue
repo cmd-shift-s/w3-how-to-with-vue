@@ -54,7 +54,8 @@ export default {
   data() {
     return {
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<div class="tab">',
           '  <button class="tablinks" onclick="openCity(event, \'London\')">London</button>',
           '  <button class="tablinks" onclick="openCity(event, \'Paris\')">Paris</button>',
@@ -75,8 +76,10 @@ export default {
           '  <h3>Tokyo</h3>',
           '  <p>Tokyo is the capital of Japan.</p>',
           '</div>',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '/* Style the tab */',
           'div.tab {',
           '    float: left;',
@@ -119,8 +122,10 @@ export default {
           '    border-left: none;',
           '    height: 300px;',
           '}',
-          '```'].join('\n'),
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           'function openCity(evt, cityName) {',
           '    // Declare all variables',
           '    var i, tabcontent, tablinks;',
@@ -141,7 +146,8 @@ export default {
           '    document.getElementById(cityName).style.display = "block";',
           '    evt.currentTarget.className += " active";',
           '}',
-          '```'].join('\n')
+          '```'
+        ]
       ]
     }
   },

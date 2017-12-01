@@ -42,9 +42,10 @@ export default {
   methods: {
     async load() {
       if (this.page) {
-        this.component = typeof this.page === 'function'
-          ? await this.page().then(component => component.default)
-          : this.page
+        this.component =
+          typeof this.page === 'function'
+            ? await this.page().then(component => component.default)
+            : this.page
       }
 
       this.isLoaded = true

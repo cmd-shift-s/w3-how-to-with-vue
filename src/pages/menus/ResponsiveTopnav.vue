@@ -38,11 +38,10 @@ export default {
   data() {
     return {
       currentLink: '',
-      links: [
-        'Home', 'News', 'Contact', 'About'
-      ],
+      links: ['Home', 'News', 'Contact', 'About'],
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<div class="topnav" id="myTopnav">',
           '  <a href="#home" class="active">Home</a>',
           '  <a href="#news">News</a>',
@@ -50,8 +49,10 @@ export default {
           '  <a href="#about">About</a>',
           '  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>',
           '</div>',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '/* Add a black background color to the top navigation */',
           '.topnav {',
           '  background-color: #333;',
@@ -85,8 +86,10 @@ export default {
           '.topnav .icon {',
           '  display: none;',
           '}',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */',
           '@media screen and (max-width: 600px) {',
           '  .topnav a:not(:first-child) {display: none;}',
@@ -110,8 +113,10 @@ export default {
           '    text-align: left;',
           '  }',
           '}',
-          '```'].join('\n'),
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           '/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */',
           'function myFunction() {',
           '  var x = document.getElementById("myTopnav");',
@@ -121,7 +126,8 @@ export default {
           '    x.className = "topnav";',
           '  }',
           '}',
-          '```'].join('\n')
+          '```'
+        ]
       ]
     }
   },

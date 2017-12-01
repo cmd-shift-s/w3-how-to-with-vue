@@ -37,9 +37,7 @@ export default {
   data() {
     return {
       currentLink: '',
-      links: [
-        'Home', 'News', 'Contact'
-      ],
+      links: ['Home', 'News', 'Contact'],
       examples: [
         [
           '``` html',

@@ -17,7 +17,7 @@
 
 <script>
 import Card from '../layout/Card.vue'
-import {routes} from '@/router'
+import { routes } from '@/router'
 
 export default {
   name: 'home',
@@ -41,8 +41,8 @@ export default {
         }
       })
 
-      this.routes1.push(Object.assign({}, route, {children: children1}))
-      this.routes2.push(Object.assign({}, route, {children: children2}))
+      this.routes1.push(Object.assign({}, route, { children: children1 }))
+      this.routes2.push(Object.assign({}, route, { children: children2 }))
     })
   },
   components: {

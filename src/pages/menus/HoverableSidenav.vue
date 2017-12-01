@@ -34,15 +34,18 @@ export default {
   data() {
     return {
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<div id="mySidenav" class="sidenav">',
           '  <a href="#" id="about">About</a>',
           '  <a href="#" id="blog">Blog</a>',
           '  <a href="#" id="projects">Projects</a>',
           '  <a href="#" id="contact">Contact</a>',
           '</div>',
-          '```'],
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '/* Style the links inside the sidenav */',
           '#mySidenav a {',
           '  position: absolute; /* Position them relative to the browser window */',
@@ -80,7 +83,8 @@ export default {
           '  top: 200px;',
           '  background-color: #555 /* Light Black */',
           '}',
-          '```']
+          '```'
+        ]
       ]
     }
   },

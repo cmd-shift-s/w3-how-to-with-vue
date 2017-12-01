@@ -41,7 +41,8 @@ export default {
       pos: 0,
       menus: ['Home', 'Link 1', 'Link 2', 'Link 3', 'Link 4'],
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<div class="vertical-menu">',
           '  <a href="#" class="active">Home</a>',
           '  <a href="#">Link 1</a>',
@@ -49,8 +50,10 @@ export default {
           '  <a href="#">Link 3</a>',
           '  <a href="#">Link 4</a>',
           '</div>',
-          '```'],
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '.vertical-menu {',
           '  width: 200px; /* Set a width if you like */',
           '}',
@@ -71,14 +74,17 @@ export default {
           '  background-color: #4CAF50; /* Add a green color to the "active/current" link */',
           '  color: white;',
           '}',
-          '```'],
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '.vertical-menu {',
           '  width: 200px;',
           '  height: 150px;',
           '  overflow-y: auto;',
           '}',
-          '```']
+          '```'
+        ]
       ]
     }
   },

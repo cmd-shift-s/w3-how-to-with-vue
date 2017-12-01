@@ -21,7 +21,7 @@ export default {
       return cls
     }, {})
 
-    return h('div', {'class': cls}, ctx.children)
+    return h('div', { class: cls }, ctx.children)
   }
 }
 </script>

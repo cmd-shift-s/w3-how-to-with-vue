@@ -40,9 +40,7 @@ export default {
     return {
       isActive: false,
       currentLink: '',
-      links: [
-        'Home', 'News', 'Contact'
-      ],
+      links: ['Home', 'News', 'Contact'],
       examples: [
         [
           '``` html',
@@ -99,11 +97,13 @@ export default {
   },
   mounted() {
     this.currentLink = this.links[0]
-    this.$el.querySelector('.sample-contents')
+    this.$el
+      .querySelector('.sample-contents')
       .addEventListener('scroll', this.onScroll)
   },
   beforeDestroy() {
-    this.$el.querySelector('.sample-contents')
+    this.$el
+      .querySelector('.sample-contents')
       .removeEventListener('scroll', this.onScroll)
   },
   methods: {

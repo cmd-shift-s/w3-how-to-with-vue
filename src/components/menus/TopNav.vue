@@ -83,7 +83,7 @@ export default {
   .top-nav {
     &.is-responsive {
       display: block;
-       
+
       a:not(.is-active) {display: none;}
       .toggle-menu {
         float: right;

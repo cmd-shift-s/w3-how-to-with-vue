@@ -22,9 +22,7 @@ export default {
   },
   computed: {
     compiledCode() {
-      const code = Array.isArray(this.code)
-        ? this.code.join('\n')
-        : this.code
+      const code = Array.isArray(this.code) ? this.code.join('\n') : this.code
       return this.compileMarked(code)
     }
   },

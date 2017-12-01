@@ -1,4 +1,4 @@
-import {mount, renderer} from '#/unit/utils'
+import { mount, renderer } from '#/unit/utils'
 import HoverableSidenav from '@/components/menus/HoverableSidenav.vue'
 
 describe('HoverableSidenav.vue', () => {

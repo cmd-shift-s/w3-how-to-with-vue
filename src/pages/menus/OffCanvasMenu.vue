@@ -41,15 +41,11 @@ export default {
   menu: 'Off-Canvas Menu',
   data() {
     return {
-      samples: [
-        { isActive: false },
-        { isActive: false }
-      ],
-      links: [
-        'About', 'Services', 'Clients', 'Contact'
-      ],
+      samples: [{ isActive: false }, { isActive: false }],
+      links: ['About', 'Services', 'Clients', 'Contact'],
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<div id="mySidenav" class="sidenav">',
           '  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>',
           '  <a href="#">About</a>',
@@ -65,8 +61,10 @@ export default {
           '<div id="main">',
           '  ...',
           '</div>',
-          '```'],
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '/* The side navigation menu */',
           '.sidenav {',
           '  height: 100%; /* 100% Full-height */',
@@ -116,8 +114,10 @@ export default {
           '  .sidenav {padding-top: 15px;}',
           '  .sidenav a {font-size: 18px;}',
           '}',
-          '```'],
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           '/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */',
           'function openNav() {',
           '  document.getElementById("mySidenav").style.width = "250px";',
@@ -129,8 +129,10 @@ export default {
           '  document.getElementById("mySidenav").style.width = "0";',
           '  document.getElementById("main").style.marginLeft = "0";',
           '}',
-          '```'],
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           '/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */',
           'function openNav() {',
           '  document.getElementById("mySidenav").style.width = "250px";',
@@ -144,8 +146,8 @@ export default {
           '  document.getElementById("main").style.marginLeft = "0";',
           '  document.body.style.backgroundColor = "white";',
           '}',
-          '```']
-
+          '```'
+        ]
       ]
     }
   },

@@ -64,7 +64,8 @@ export default {
   data() {
     return {
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<div class="tab">',
           '  <button class="tablinks" onclick="openCity(event, \'London\')">London</button>',
           '  <button class="tablinks" onclick="openCity(event, \'Paris\')">Paris</button>',
@@ -85,8 +86,10 @@ export default {
           '  <h3>Tokyo</h3>',
           '  <p>Tokyo is the capital of Japan.</p>',
           '</div>',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '/* Style the tab */',
           'div.tab {',
           '    overflow: hidden;',
@@ -122,8 +125,10 @@ export default {
           '    border: 1px solid #ccc;',
           '    border-top: none;',
           '}',
-          '```'].join('\n'),
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           'function openCity(evt, cityName) {',
           '    // Declare all variables',
           '    var i, tabcontent, tablinks;',
@@ -144,8 +149,10 @@ export default {
           '    document.getElementById(cityName).style.display = "block";',
           '    evt.currentTarget.className += " active";',
           '}',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '.tabcontent {',
           '    -webkit-animation: fadeEffect 1s;',
           '    animation: fadeEffect 1s; /* Fading effect takes 1 second */',
@@ -160,16 +167,20 @@ export default {
           '    from {opacity: 0;}',
           '    to {opacity: 1;}',
           '}',
-          '```'].join('\n'),
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           '<button class="tablinks" onclick="openCity(event, \'London\')" id="defaultOpen">London</button>',
           '',
           '<script>',
           '// Get the element with id="defaultOpen" and click on it',
           'document.getElementById("defaultOpen").click();',
           '</' + 'script>',
-          '```'].join('\n'),
-        ['``` html',
+          '```'
+        ],
+        [
+          '``` html',
           '<!-- Click on the <span> element to close the tab -->',
           '',
           '<div id="London" class="tabcontent">',
@@ -177,7 +188,8 @@ export default {
           '  <p>London is the capital city of England.</p>',
           '  <span onclick="this.parentElement.style.display=\'none\'">x</span> ',
           '</div>',
-          '```'].join('\n')
+          '```'
+        ]
       ]
     }
   },

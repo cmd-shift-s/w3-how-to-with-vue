@@ -30,14 +30,8 @@ export default {
   name: 'fullscreen-navigation-page',
   data() {
     return {
-      samples: [
-        { isActive: false },
-        { isActive: false },
-        { isActive: false }
-      ],
-      links: [
-        'About', 'Services', 'Clients', 'Contact'
-      ]
+      samples: [{ isActive: false }, { isActive: false }, { isActive: false }],
+      links: ['About', 'Services', 'Clients', 'Contact']
     }
   },
   methods: {

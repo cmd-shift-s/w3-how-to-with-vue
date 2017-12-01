@@ -1,4 +1,4 @@
-import {mount, renderer} from '#/unit/utils'
+import { mount, renderer } from '#/unit/utils'
 import SideNav from '@/components/menus/SideNav.vue'
 
 describe('SideNav.vue', () => {

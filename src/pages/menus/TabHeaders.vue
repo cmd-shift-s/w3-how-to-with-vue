@@ -57,7 +57,8 @@ export default {
   data() {
     return {
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<div id="London" class="tabcontent">',
           '  <h3>London</h3>',
           '  <p>London is the capital city of England.</p>',
@@ -82,8 +83,10 @@ export default {
           '<button class="tablink" onclick="openCity(\'Paris\', this, \'green\')">Paris</button>',
           '<button class="tablink" onclick="openCity(\'Tokyo\', this, \'blue\')">Tokyo</button>',
           '<button class="tablink" onclick="openCity(\'Oslo\', this, \'orange\')">Oslo</button>',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '/* Style the tab buttons */',
           '.tablink {',
           '  background-color: #555;',
@@ -115,8 +118,10 @@ export default {
           '#Paris {background-color:green;}',
           '#Tokyo {background-color:blue;}',
           '#Oslo {background-color:orange;}',
-          '```'].join('\n'),
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           'function openCity(cityName, elmnt, color) {',
           '  // Hide all elements with class="tabcontent" by default */',
           '  var i, tabcontent, tablinks;',
@@ -140,7 +145,8 @@ export default {
           '',
           '// Get the element with id="defaultOpen" and click on it',
           'document.getElementById("defaultOpen").click();',
-          '```'].join('\n')
+          '```'
+        ]
       ]
     }
   },

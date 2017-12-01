@@ -23,10 +23,14 @@ export default {
   computed: {
     type() {
       switch (true) {
-        case this.html: return 'Add HTML'
-        case this.css: return 'Add CSS'
-        case this.js: return 'Add JavaScript'
-        default: return this.title
+        case this.html:
+          return 'Add HTML'
+        case this.css:
+          return 'Add CSS'
+        case this.js:
+          return 'Add JavaScript'
+        default:
+          return this.title
       }
     }
   }

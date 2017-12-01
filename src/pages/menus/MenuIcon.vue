@@ -52,27 +52,30 @@ export default {
   data() {
     return {
       examples: [
-        ['``` html',
-          '<div></div>',
-          '<div></div>',
-          '<div></div>',
-          '```'].join('\n'),
-        ['``` css',
+        ['``` html', '<div></div>', '<div></div>', '<div></div>', '```'].join(
+          '\n'
+        ),
+        [
+          '``` css',
           'div {',
           '  width: 35px;',
           '  height: 5px;',
           '  background-color: black;',
           '  margin: 6px 0;',
           '}',
-          '```'].join('\n'),
-        ['``` html',
+          '```'
+        ],
+        [
+          '``` html',
           '<div class="container" onclick="myFunction(this)">',
           '  <div class="bar1"></div>',
           '  <div class="bar2"></div>',
           '  <div class="bar3"></div>',
           '</div>',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '.container {',
           '  display: inline-block;',
           '  cursor: pointer;',
@@ -102,12 +105,15 @@ export default {
           '  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;',
           '  transform: rotate(45deg) translate(-8px, -8px) ;',
           '}',
-          '```'].join('\n'),
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           'function myFunction(x) {',
           '  x.classList.toggle("change");',
           '}',
-          '```'].join('\n')
+          '```'
+        ]
       ]
     }
   },

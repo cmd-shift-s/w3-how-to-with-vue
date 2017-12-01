@@ -18,9 +18,7 @@ export default {
   data() {
     return {
       currentLink: '',
-      links: [
-        'Home', 'News', 'Contact', 'About'
-      ]
+      links: ['Home', 'News', 'Contact', 'About']
     }
   },
   mounted() {

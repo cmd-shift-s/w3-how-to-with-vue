@@ -1,4 +1,4 @@
-import {mount, renderer} from '#/unit/utils'
+import { mount, renderer } from '#/unit/utils'
 import MenuIcon from '@/components/menus/MenuIcon.vue'
 
 describe('MenuIcon.vue', () => {

@@ -1,4 +1,4 @@
-import {mount, renderer} from '#/unit/utils'
+import { mount, renderer } from '#/unit/utils'
 import IconBar from '@/components/menus/IconBar.vue'
 
 describe('IconBar.vue', () => {

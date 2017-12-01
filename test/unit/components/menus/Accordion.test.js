@@ -1,4 +1,4 @@
-import {mount, renderer} from '#/unit/utils'
+import { mount, renderer } from '#/unit/utils'
 import Accordion from '@/components/menus/Accordion.vue'
 
 describe('Accordion.vue', () => {

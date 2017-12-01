@@ -62,7 +62,8 @@ export default {
     },
     toggle($event, link) {
       if (this.currentLink) {
-        this.$el.querySelector(`#${this.currentLink}`)
+        this.$el
+          .querySelector(`#${this.currentLink}`)
           .classList.remove('is-active')
       }
 

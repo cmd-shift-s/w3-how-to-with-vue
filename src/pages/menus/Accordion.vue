@@ -46,7 +46,8 @@ export default {
   data() {
     return {
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<button class="accordion">Section 1</button>',
           '<div class="panel">',
           '  <p>Lorem ipsum...</p>',
@@ -61,8 +62,10 @@ export default {
           '<div class="panel">',
           '  <p>Lorem ipsum...</p>',
           '</div>',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '/* Style the buttons that are used to open and close the accordion panel */',
           'button.accordion {',
           '  background-color: #eee;',
@@ -87,8 +90,10 @@ export default {
           '  background-color: white;',
           '  display: none;',
           '}',
-          '```'].join('\n'),
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           'var acc = document.getElementsByClassName("accordion");',
           'var i;',
           '',
@@ -107,8 +112,10 @@ export default {
           '    }',
           '  }',
           '}',
-          '```'].join('\n'),
-        ['``` js',
+          '```'
+        ],
+        [
+          '``` js',
           '<style>',
           'div.panel {',
           '  padding: 0 18px;',
@@ -135,8 +142,10 @@ export default {
           '  }',
           '}',
           '</' + 'script>',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           'button.accordion:after {',
           '  content: \'\\02795\'; /* Unicode character for "plus" sign (+) */',
           '  font-size: 13px;',
@@ -148,7 +157,8 @@ export default {
           'button.accordion.active:after {',
           '  content: "\\2796"; /* Unicode character for "minus" sign (-) */',
           '}',
-          '```'].join('\n')
+          '```'
+        ]
       ]
     }
   },

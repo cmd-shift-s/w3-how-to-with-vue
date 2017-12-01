@@ -38,7 +38,7 @@ export default {
     }
   },
   computed: {
-    '$content'() {
+    $content() {
       return this.selector
         ? document.querySelector(this.selector)
         : this.$el.parentElement

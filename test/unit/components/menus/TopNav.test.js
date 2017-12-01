@@ -1,4 +1,4 @@
-import {mount, renderer} from '#/unit/utils'
+import { mount, renderer } from '#/unit/utils'
 import TopNav from '@/components/menus/TopNav.vue'
 
 describe('TopNav.vue', () => {

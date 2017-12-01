@@ -54,9 +54,7 @@ export default {
         { isActive: false },
         { isActive: false }
       ],
-      links: [
-        'About', 'Services', 'Clients', 'Contact'
-      ]
+      links: ['About', 'Services', 'Clients', 'Contact']
     }
   },
   methods: {

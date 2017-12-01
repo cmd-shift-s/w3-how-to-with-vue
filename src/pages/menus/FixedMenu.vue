@@ -41,9 +41,7 @@ export default {
     return {
       intro: 'a "fixed" menu with CSS',
       currentLink: '',
-      links: [
-        'Home', 'News', 'Contact'
-      ],
+      links: ['Home', 'News', 'Contact'],
       examples: [
         [
           '``` html',

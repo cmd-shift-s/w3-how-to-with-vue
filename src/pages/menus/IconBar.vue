@@ -43,7 +43,8 @@ export default {
       menus: ['home', 'search', 'envelope', 'globe', 'trash'],
       pos: 0,
       examples: [
-        ['``` html',
+        [
+          '``` html',
           '<!-- Add icon library -->',
           '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">',
           '',
@@ -54,8 +55,10 @@ export default {
           '  <a href="#"><i class="fa fa-globe"></i></a>',
           '  <a href="#"><i class="fa fa-trash"></i></a>',
           '</div>',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '.icon-bar {',
           '  width: 90px; /* Set a specific width */',
           '  background-color: #555; /* Dark-grey background */',
@@ -77,8 +80,10 @@ export default {
           '.active {',
           '  background-color: #4CAF50; /* Add an active/current color */',
           '}',
-          '```'].join('\n'),
-        ['``` css',
+          '```'
+        ],
+        [
+          '``` css',
           '.icon-bar {',
           '  width: 100%; /* Full-width */',
           '  background-color: #555; /* Dark-grey background */',
@@ -102,7 +107,8 @@ export default {
           '.active {',
           '  background-color: #4CAF50; /* Add an active/current color */',
           '}',
-          '```'].join('\n')
+          '```'
+        ]
       ]
     }
   },
