@@ -48,25 +48,23 @@ export default {
       const search = this.search.toLowerCase()
       return search
         ? this.routes
-            .filter(({ name, children }) => {
-              return children
-                ? children.some(({ name }) =>
-                    name.toLowerCase().includes(search)
-                  )
-                : name.toLowerCase().includes(this.search)
-            })
-            .reduce((routes, route) => {
-              const r = {
-                ...route
-              }
-              if (r.children) {
-                r.children = r.children.filter(({ name }) =>
-                  name.toLowerCase().includes(search)
-                )
-              }
-              routes.push(r)
-              return routes
-            }, [])
+          .filter(({ name, children }) => {
+            return children
+              ? children.some(({ name }) => name.toLowerCase().includes(search))
+              : name.toLowerCase().includes(this.search)
+          })
+          .reduce((routes, route) => {
+            const r = {
+              ...route
+            }
+            if (r.children) {
+              r.children = r.children.filter(({ name }) =>
+                name.toLowerCase().includes(search)
+              )
+            }
+            routes.push(r)
+            return routes
+          }, [])
         : this.routes
     }
   },
