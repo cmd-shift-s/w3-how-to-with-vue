@@ -1,7 +1,10 @@
 <template lang="html">
   <div class="example-code">
     <h3>{{title}}</h3>
-    <div class="code" v-html="compiledCode"></div>
+    <div v-if="code" class="code" v-html="compiledCode"></div>
+    <div class="sample">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -16,12 +19,12 @@ export default {
       default: 'Example'
     },
     code: {
-      type: [String, Array],
-      required: true
+      type: [String, Array]
     }
   },
   computed: {
     compiledCode() {
+      if (!this.code) return ''
       const code = Array.isArray(this.code) ? this.code.join('\n') : this.code
       return this.compileMarked(code)
     }
@@ -55,6 +58,13 @@ export default {
         white-space: pre-wrap;
       }
     }
+  }
+
+  .sample {
+    padding: 8px 12px;
+    margin: 16px 0;
+    background-color: white;
+    width: inherit;
   }
 }
 </style>
