@@ -18,6 +18,7 @@ const BottomBorderNavLinks = () => import(/* webpackChunkName: "pages/menus/Bott
 const FixedMenu = () => import(/* webpackChunkName: "pages/menus/FixedMenu" */ './FixedMenu.vue')
 const SlideDownBarOnScroll = () => import(/* webpackChunkName: "pages/menus/SlideDownBarOnScroll" */ './SlideDownBarOnScroll.vue')
 const StickyNavbar = () => import(/* webpackChunkName: "pages/menus/StickyNavbar" */ './StickyNavbar.vue')
+const HoverableDropdown = () => import(/* webpackChunkName: "pages/menus/HoverableDropdown" */ './HoverableDropdown.vue')
 
 export default {
   IconBar,
@@ -39,5 +40,6 @@ export default {
   BottomBorderNavLinks,
   FixedMenu,
   SlideDownBarOnScroll,
-  StickyNavbar
+  StickyNavbar,
+  HoverableDropdown
 }
