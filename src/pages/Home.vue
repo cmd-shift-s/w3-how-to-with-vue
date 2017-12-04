@@ -58,13 +58,17 @@ export default {
   flex-direction: row;
 
   .half {
-    flex: 1;
+    width: 50%;
   }
 }
 
 @media (max-width: 768px) {
   .card-container {
     flex-direction: column;
+
+    .half {
+      width: 100%;
+    }
   }
 }
 </style>
