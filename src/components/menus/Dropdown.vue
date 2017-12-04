@@ -2,6 +2,7 @@
   <div class="dropdown">
     <button>
       {{title}}
+      <i v-if="icon" class="fa" :class="icon"></i>
     </button>
     <div class="content">
       <slot></slot>
@@ -16,7 +17,8 @@ export default {
     title: {
       type: String,
       required: true
-    }
+    },
+    icon: String
   }
 }
 </script>
@@ -54,7 +56,7 @@ export default {
       }
     }
   }
-  
+
   &:hover {
     button {
       background-color: #3e8e41;

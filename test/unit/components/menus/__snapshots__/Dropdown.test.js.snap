@@ -1,9 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dropdown.vue props#icon 1`] = `
+<div class="dropdown"><button>
+    button
+    <i class="fa fa-caret-down"></i></button>
+    <div class="content"></div>
+</div>
+`;
+
 exports[`Dropdown.vue render default 1`] = `
 <div class="dropdown"><button>
     button
-  </button>
+    <!----></button>
     <div class="content"></div>
 </div>
 `;
@@ -11,7 +19,7 @@ exports[`Dropdown.vue render default 1`] = `
 exports[`Dropdown.vue slots#default 1`] = `
 <div class="dropdown"><button>
     button
-  </button>
+    <!----></button>
     <div class="content"><a>Link</a></div>
 </div>
 `;
