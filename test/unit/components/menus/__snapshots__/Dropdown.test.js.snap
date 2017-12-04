@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown.vue render default 1`] = `
+<div class="dropdown"><button>
+    button
+  </button>
+    <div class="content"></div>
+</div>
+`;
+
+exports[`Dropdown.vue slots#default 1`] = `
+<div class="dropdown"><button>
+    button
+  </button>
+    <div class="content"><a>Link</a></div>
+</div>
+`;
