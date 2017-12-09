@@ -1,7 +1,8 @@
 <template>
   <page
     title="Hoverable Dropdown"
-    intro="a hoverable dropdown menu with CSS">
+    intro="a hoverable dropdown menu with CSS"
+    class="hoverable-dropdown-page">
 
     <template slot="header">
     <h2 class="title">Dropdown</h2>
@@ -154,46 +155,48 @@ export default {
 </script>
 
 <style lang="scss">
-.right-aligned-dropdown-example {
-  .sample {
-    min-height: 300px;
-    flex-direction: column;
+.hoverable-dropdown-page {
+  .right-aligned-dropdown-example {
+    .sample {
+      min-height: 300px;
+      flex-direction: column;
 
-    .buttons {
-      display: flex;
-      justify-content: space-between;
+      .buttons {
+        display: flex;
+        justify-content: space-between;
 
-      .right {
-        .content {
-          right: 0;
+        .right {
+          .content {
+            right: 0;
+          }
         }
       }
     }
   }
-}
 
-.dropdown-menu-in-navbar-example {
-  .sample {
-    min-height: 200px;
-    flex-direction: column;
+  .dropdown-menu-in-navbar-example {
+    .sample {
+      min-height: 200px;
+      flex-direction: column;
 
-    .top-nav {
-      overflow: inherit;
+      .top-nav {
+        overflow: inherit;
 
-      .dropdown {
-        button {
-          background-color: #333;
-          color: #f2f2f2;
-          border-radius: 0;
+        .dropdown {
+          button {
+            background-color: #333;
+            color: #f2f2f2;
+            border-radius: 0;
 
-          &:hover {
-            background-color: #ddd;
-            color: black;
+            &:hover {
+              background-color: #ddd;
+              color: black;
+            }
           }
-        }
 
-        a {
-          text-align: left;
+          a {
+            text-align: left;
+          }
         }
       }
     }
