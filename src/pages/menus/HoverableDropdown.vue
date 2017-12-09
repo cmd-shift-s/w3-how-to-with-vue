@@ -9,7 +9,7 @@
     </template>
 
     <sample>
-      <dropdown title="Hover Me">
+      <dropdown title="Hover Me" is-hoverable>
         <a href="javascript:void(0)">Link 1</a>
         <a href="javascript:void(0)">Link 2</a>
         <a href="javascript:void(0)">Link 3</a>
@@ -41,12 +41,12 @@
       <h2>Aligned Dropdown Content</h2>
       <p>Determine whether the dropdown content should go from left to right or right to left with the left and right properties.</p>
       <div class="buttons">
-        <dropdown title="Left" class="left">
+        <dropdown title="Left" class="left" is-hoverable>
           <a href="javascript:void(0)">Link 1</a>
           <a href="javascript:void(0)">Link 2</a>
           <a href="javascript:void(0)">Link 3</a>
         </dropdown>
-        <dropdown title="Right" class="right">
+        <dropdown title="Right" class="right" is-hoverable>
           <a href="javascript:void(0)">Link 1</a>
           <a href="javascript:void(0)">Link 2</a>
           <a href="javascript:void(0)">Link 3</a>
@@ -59,7 +59,7 @@
       <top-nav>
         <a>Home</a>
         <a>News</a>
-        <dropdown title="Dropdown" icon="fa-caret-down">
+        <dropdown title="Dropdown" icon="fa-caret-down" is-hoverable>
           <a href="javascript:void(0)">Link 1</a>
           <a href="javascript:void(0)">Link 2</a>
           <a href="javascript:void(0)">Link 3</a>

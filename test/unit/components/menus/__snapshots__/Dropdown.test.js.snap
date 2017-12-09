@@ -8,8 +8,16 @@ exports[`Dropdown.vue props#icon 1`] = `
 </div>
 `;
 
+exports[`Dropdown.vue props#is-hoverable 1`] = `
+<div class="dropdown is-hoverable"><button>
+    button
+    <!----></button>
+    <div class="content"></div>
+</div>
+`;
+
 exports[`Dropdown.vue render default 1`] = `
-<div class="dropdown"><button>
+<div class="dropdown is-active"><button>
     button
     <!----></button>
     <div class="content"></div>

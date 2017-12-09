@@ -1,6 +1,6 @@
 <template>
-  <div class="dropdown">
-    <button>
+  <div class="dropdown" :class="{'is-hoverable': isHoverable, 'is-active': isActive}" @click.stop="">
+    <button @click="toggle()">
       {{title}}
       <i v-if="icon" class="fa" :class="icon"></i>
     </button>
@@ -18,7 +18,35 @@ export default {
       type: String,
       required: true
     },
-    icon: String
+    icon: String,
+    isHoverable: Boolean
+  },
+  data() {
+    return {
+      isActive: false
+    }
+  },
+  computed: {
+    isClickable() {
+      return !this.isHoverable
+    }
+  },
+  beforeMount() {
+    if (this.isClickable) {
+      window.addEventListener('click', this.close)
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener('click', this.close)
+  },
+  methods: {
+    toggle() {
+      if (this.isHoverable) return
+      this.isActive = !this.isActive
+    },
+    close($event) {
+      this.isActive = false
+    }
   }
 }
 </script>
@@ -35,6 +63,10 @@ export default {
     font-size: 16px;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      background-color: #3e8e41;
+    }
   }
 
   .content {
@@ -57,10 +89,7 @@ export default {
     }
   }
 
-  &:hover {
-    button {
-      background-color: #3e8e41;
-    }
+  &.is-hoverable:hover, &.is-active {
     .content {
       display: block;
     }

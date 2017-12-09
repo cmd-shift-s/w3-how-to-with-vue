@@ -12,6 +12,9 @@ describe('Dropdown.vue', () => {
     expect(wrap.hasClass('dropdown')).toBe(true)
     expect(wrap.find('button').text().trim()).toEqual('button')
 
+    // button click is-active
+    wrap.find('button').element.click()
+
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
       expect(str).toMatchSnapshot()
@@ -49,6 +52,24 @@ describe('Dropdown.vue', () => {
     expect(wrap.hasClass('dropdown')).toBe(true)
     expect(wrap.find('button').text().trim()).toEqual('button')
     expect(wrap.find('i').hasClass('fa fa-caret-down')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
+
+  it('props#is-hoverable', () => {
+    const wrap = mount(Dropdown, {
+      propsData: {
+        title: 'button',
+        isHoverable: true
+      }
+    })
+
+    expect(wrap.hasClass('dropdown')).toBe(true)
+    expect(wrap.hasClass('is-hoverable')).toBe(true)
+    expect(wrap.find('button').text().trim()).toEqual('button')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
