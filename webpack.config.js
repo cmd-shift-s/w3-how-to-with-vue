@@ -2,8 +2,6 @@ var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
-var isProduction = process.env.NODE_ENV === 'production'
-
 module.exports = {
   entry: {
     app: './src/main.js'
@@ -11,8 +9,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '',
-    chunkFilename: isProduction ? 'js/[name].[chunkhash:7].js' : 'js/[name].js',
-    filename: isProduction ? 'js/[name].[chunkhash:7].js' : 'js/[name].js'
+    chunkFilename: 'js/[name].js',
+    filename: 'js/[name].js'
   },
   module: {
     rules: [
@@ -87,6 +85,8 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
+  module.exports.output.chunkFilename = 'js/[name].js?id=[chunkhash]'
+  module.exports.output.filename = 'js/[name].js?id=[chunkhash]'
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
