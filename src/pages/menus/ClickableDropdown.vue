@@ -23,7 +23,7 @@
     <p>Create a dropdown menu that appears when the user clicks on a button.</p>
     <step no="1" html></step>
     <example-code :code="examples[0]"></example-code>
-    h3 class="explain">Example Explained</h3>
+    <h3 class="explain">Example Explained</h3>
     <p>Use any element to open the dropdown menu, e.g. a &lt;button>, &lt;a> or &lt;p> element.</p>
     <p>Use a container element (like &lt;div>) to create the dropdown menu and add the dropdown links inside it.</p>
     <p>Wrap a &lt;div> element around the button and the &lt;div> to position the dropdown menu correctly with CSS.</p>
