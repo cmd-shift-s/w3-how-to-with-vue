@@ -2,7 +2,7 @@
   <div class="example-code">
     <h3>{{title}}</h3>
     <div v-if="code" class="code" v-html="compiledCode"></div>
-    <div class="sample">
+    <div v-else class="sample">
       <slot></slot>
     </div>
   </div>
