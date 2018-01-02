@@ -1,10 +1,8 @@
 <template lang="html">
   <div class="example-code">
     <h3>{{title}}</h3>
+    <slot></slot>
     <div v-if="code" class="code" v-html="compiledCode"></div>
-    <div v-else class="sample">
-      <slot></slot>
-    </div>
   </div>
 </template>
 

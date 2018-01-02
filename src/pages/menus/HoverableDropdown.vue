@@ -39,35 +39,39 @@
     <hr>
     <h2 class="title">Right-aligned dropdown</h2>
     <example-code class="right-aligned-dropdown-example">
-      <h2>Aligned Dropdown Content</h2>
-      <p>Determine whether the dropdown content should go from left to right or right to left with the left and right properties.</p>
-      <div class="buttons">
-        <dropdown title="Left" class="left" is-hoverable>
-          <a href="javascript:void(0)">Link 1</a>
-          <a href="javascript:void(0)">Link 2</a>
-          <a href="javascript:void(0)">Link 3</a>
-        </dropdown>
-        <dropdown title="Right" class="right" is-hoverable>
-          <a href="javascript:void(0)">Link 1</a>
-          <a href="javascript:void(0)">Link 2</a>
-          <a href="javascript:void(0)">Link 3</a>
-        </dropdown>
-      </div>
+      <sample>
+        <h2>Aligned Dropdown Content</h2>
+        <p>Determine whether the dropdown content should go from left to right or right to left with the left and right properties.</p>
+        <div class="buttons">
+          <dropdown title="Left" class="left" is-hoverable>
+            <a href="javascript:void(0)">Link 1</a>
+            <a href="javascript:void(0)">Link 2</a>
+            <a href="javascript:void(0)">Link 3</a>
+          </dropdown>
+          <dropdown title="Right" class="right" is-hoverable>
+            <a href="javascript:void(0)">Link 1</a>
+            <a href="javascript:void(0)">Link 2</a>
+            <a href="javascript:void(0)">Link 3</a>
+          </dropdown>
+        </div>
+      </sample>
     </example-code>
     <hr>
     <h2 class="title">Dropdown Menu in Navbar</h2>
     <example-code class="dropdown-menu-in-navbar-example">
-      <top-nav>
-        <a>Home</a>
-        <a>News</a>
-        <dropdown title="Dropdown" icon="fa-caret-down" is-hoverable>
-          <a href="javascript:void(0)">Link 1</a>
-          <a href="javascript:void(0)">Link 2</a>
-          <a href="javascript:void(0)">Link 3</a>
-        </dropdown>
-      </top-nav>
-      <h3>Dropdown Menu inside a Navigation Bar</h3>
-      <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+      <sample>
+        <top-nav>
+          <a>Home</a>
+          <a>News</a>
+          <dropdown title="Dropdown" icon="fa-caret-down" is-hoverable>
+            <a href="javascript:void(0)">Link 1</a>
+            <a href="javascript:void(0)">Link 2</a>
+            <a href="javascript:void(0)">Link 3</a>
+          </dropdown>
+        </top-nav>
+        <h3>Dropdown Menu inside a Navigation Bar</h3>
+        <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+      </sample>
     </example-code>
     </template>
 

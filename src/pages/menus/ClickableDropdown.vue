@@ -39,42 +39,48 @@
     <example-code :code="examples[2]"></example-code>
     <h2 class="title">Right-aligned dropdown</h2>
     <example-code class="right-aligned-dropdown-example">
-      <h2>Aligned Dropdown Content</h2>
-      <p>Use <b>float: right</b> on the dropdown class to float the dropdown menu to the right, and <b>right:0</b> on the dropdown-content if you want the dropdown content to go from right to left.</p>
-      <div class="buttons">
-        <dropdown title="Dropdown" class="right">
-          <a href="javascript:void(0)">Home</a>
-          <a href="javascript:void(0)">About</a>
-          <a href="javascript:void(0)">Contact</a>
-        </dropdown>
-      </div>
+      <sample>
+        <h2>Aligned Dropdown Content</h2>
+        <p>Use <b>float: right</b> on the dropdown class to float the dropdown menu to the right, and <b>right:0</b> on the dropdown-content if you want the dropdown content to go from right to left.</p>
+        <div class="buttons">
+          <dropdown title="Dropdown" class="right">
+            <a href="javascript:void(0)">Home</a>
+            <a href="javascript:void(0)">About</a>
+            <a href="javascript:void(0)">Contact</a>
+          </dropdown>
+        </div>
+      </sample>
     </example-code>
     <example-code class="dropdown-menu-in-navbar-example">
-      <top-nav>
-        <a>Home</a>
-        <a>News</a>
-        <dropdown title="Dropdown" icon="fa-caret-down">
-          <a href="javascript:void(0)">Link 1</a>
-          <a href="javascript:void(0)">Link 2</a>
-          <a href="javascript:void(0)">Link 3</a>
-        </dropdown>
-      </top-nav>
-      <h3>Dropdown Menu inside a Navigation Bar</h3>
-      <p>Click on the "Dropdown" link to see the dropdown menu.</p>
+      <sample>
+        <top-nav>
+          <a>Home</a>
+          <a>News</a>
+          <dropdown title="Dropdown" icon="fa-caret-down">
+            <a href="javascript:void(0)">Link 1</a>
+            <a href="javascript:void(0)">Link 2</a>
+            <a href="javascript:void(0)">Link 3</a>
+          </dropdown>
+        </top-nav>
+        <h3>Dropdown Menu inside a Navigation Bar</h3>
+        <p>Click on the "Dropdown" link to see the dropdown menu.</p>
+      </sample>
     </example-code>
     <h2 class="title">Search (Filter) Dropdown</h2>
     <example-code class="search-filter-dropdown-example">
-      <h2>Search/Filter Dropdown</h2>
-      <div class="buttons">
-        <dropdown title="Dropdown">
-          <div class="search-input">
-            <i class="fa fa-search"></i>
-            <input type="text" placeholder="Search.." v-model="searchText">
-          </div>
+      <sample>
+        <h2>Search/Filter Dropdown</h2>
+        <div class="buttons">
+          <dropdown title="Dropdown">
+            <div class="search-input">
+              <i class="fa fa-search"></i>
+              <input type="text" placeholder="Search.." v-model="searchText">
+            </div>
 
-          <a href="javascript:void(0)" v-for="(link, index) of filteredLinks" :key="index">{{link}}</a>
-        </dropdown>
-      </div>
+            <a href="javascript:void(0)" v-for="(link, index) of filteredLinks" :key="index">{{link}}</a>
+          </dropdown>
+        </div>
+      </sample>
     </example-code>
     </template>
   </page>
