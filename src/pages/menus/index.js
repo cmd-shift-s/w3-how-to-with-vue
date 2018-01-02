@@ -21,6 +21,7 @@ const StickyNavbar = () => import(/* webpackChunkName: "pages/menus/StickyNavbar
 const HoverableDropdown = () => import(/* webpackChunkName: "pages/menus/HoverableDropdown" */ './HoverableDropdown.vue')
 const ClickableDropdown = () => import(/* webpackChunkName: "pages/menus/ClickableDropdown" */ './ClickableDropdown.vue')
 const DropdownNavbar = () => import(/* webpackChunkName: "pages/menus/DropdownNavbar" */ './DropdownNavbar.vue')
+const MegaMenu = () => import(/* webpackChunkName: "pages/menus/MegaMenu" */ './MegaMenu.vue')
 
 export default {
   IconBar,
@@ -45,5 +46,6 @@ export default {
   StickyNavbar,
   HoverableDropdown,
   ClickableDropdown,
-  DropdownNavbar
+  DropdownNavbar,
+  MegaMenu
 }
