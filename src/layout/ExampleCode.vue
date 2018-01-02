@@ -59,7 +59,6 @@ export default {
   }
 
   .sample {
-    padding: 8px 12px;
     margin: 16px 0;
     background-color: white;
     width: inherit;
