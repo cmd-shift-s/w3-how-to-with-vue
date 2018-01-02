@@ -1,14 +1,14 @@
 <template lang="html">
   <page
     title="Dropdown Navbar"
-    intro="a bottom navigation menu with CSS"
+    intro="a dropdown navigation bar"
     class="dropdown-navbar-page">
 
     <template slot="header">
     <h2 class="title">Dropdown Menu in Navbar</h2>
     </template>
 
-    <sample class="dropdown-navbar-page">
+    <sample>
       <top-nav>
         <a v-for="link of links" v-text="link"></a>
         <dropdown title="Dropdown" icon="fa-caret-down" is-hoverable>
