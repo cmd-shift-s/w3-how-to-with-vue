@@ -1,3 +1,7 @@
+
+// for ie promise
+import 'es6-promise/auto'
+
 // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 if (typeof Object.assign !== 'function') {
   ;(function() {
