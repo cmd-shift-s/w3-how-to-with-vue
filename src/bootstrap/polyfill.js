@@ -1,10 +1,6 @@
-
-// for ie promise
-import 'es6-promise/auto'
-
 // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 if (typeof Object.assign !== 'function') {
-  ;(function() {
+  (function() {
     Object.assign = function(target) {
       'use strict'
       // 우리는 반드시 특정한 케이스에 대해서 확인해야 합니다.
