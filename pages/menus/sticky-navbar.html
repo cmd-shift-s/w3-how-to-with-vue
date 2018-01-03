@@ -78,29 +78,29 @@ body {
 <script>
 new Vue({
   el: '#app',
-  data() {
+  data: function () {
     return {
       currentLink: '',
       links: ['Home', 'News', 'Contact']
     }
   },
-  beforeMount() {
+  beforeMount: function () {
     this.currentLink = this.links[0]
     window.addEventListener('scroll', this.onScroll)
   },
-  beforeDestory() {
+  beforeDestory: function () {
     window.removeEventListener('scroll', this.onScroll)
   },
   computed: {
-    navbar() {
+    navbar: function () {
       return this.$refs.navbar
     },
-    navbarOffsetTop() {
+    navbarOffsetTop: function () {
       return this.navbar.offsetTop
     }
   },
   methods: {
-    onScroll() {
+    onScroll: function () {
       if (window.pageYOffset >= this.navbarOffsetTop) {
         this.navbar.classList.add('sticky')
       } else {
