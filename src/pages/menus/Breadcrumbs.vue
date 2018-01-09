@@ -1,6 +1,6 @@
 <template lang="html">
   <page
-    title="CSS Breadcrumbs"
+    title="Breadcrumbs"
     intro="a breadcrumb navigation with CSS"
     class="breadcrumb-page">
 
