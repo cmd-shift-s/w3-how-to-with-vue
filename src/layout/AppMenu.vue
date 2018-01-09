@@ -25,6 +25,7 @@
         <router-link class="link" v-for="children of route.children" :key="children.path" :to="{name: children.name}" exact>{{children.name}}</router-link>
         <router-link class="link" v-if="!route.children" :to="route.path" exact>{{route.name}}</router-link>
       </div>
+      <br><br>
     </aside>
   </div>
 </template>
@@ -142,7 +143,7 @@ $menu-z-index: 10;
     display: none;
     position: fixed;
     top: 50px;
-    left: 195px;
+    left: 185px;
   }
 
   .logos {
@@ -195,6 +196,7 @@ $menu-z-index: 10;
 @media (max-width: 768px) {
   .left-menu {
     display: none;
+    height: calc(100% - 45px);
 
     &.active {
       display: inherit;
