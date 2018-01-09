@@ -28,4 +28,19 @@ describe('ButtonGroup.vue', () => {
       expect(str).toMatchSnapshot()
     })
   })
+
+  it('props#is-vertical', () => {
+    const wrap = mount(ButtonGroup, {
+      context: {
+        props: { isVertical: true }
+      }
+    })
+
+    expect(wrap.hasClass('is-vertical')).toBe(true)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
 })

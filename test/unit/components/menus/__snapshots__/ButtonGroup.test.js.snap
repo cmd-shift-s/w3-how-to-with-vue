@@ -2,4 +2,6 @@
 
 exports[`ButtonGroup.vue props#is-fullwidth 1`] = `<div class="button-group is-fullwidth"></div>`;
 
+exports[`ButtonGroup.vue props#is-vertical 1`] = `<div class="button-group is-vertical"></div>`;
+
 exports[`ButtonGroup.vue render default 1`] = `<div class="button-group"></div>`;

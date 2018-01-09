@@ -3,14 +3,16 @@ export default {
   name: 'button-group',
   functional: true,
   props: {
-    isFullwidth: Boolean
+    isFullwidth: Boolean,
+    isVertical: Boolean
   },
   render(h, ctx) {
-    return h(
-      'div',
-      { class: ['button-group', { 'is-fullwidth': ctx.props.isFullwidth }] },
-      ctx.children
-    )
+    const className = {
+      'is-fullwidth': ctx.props.isFullwidth,
+      'is-vertical': ctx.props.isVertical
+    }
+
+    return h('div', { class: ['button-group', className] }, ctx.children)
   }
 }
 </script>
@@ -21,6 +23,10 @@ export default {
 
   &.is-fullwidth {
     width: 100%;
+  }
+
+  &.is-vertical {
+    flex-direction: column;
   }
 
   button {
