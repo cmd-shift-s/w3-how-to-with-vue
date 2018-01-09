@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb.vue render default 1`] = `
+<ul class="breadcrumb">
+    <li><a href="javascript:void(0)">Home</a></li>
+    <li><a href="javascript:void(0)">Pictures</a></li>
+    <li><a href="javascript:void(0)">Summer 15</a></li>
+    <li>Italy</li>
+</ul>
+`;
