@@ -25,6 +25,7 @@ const MegaMenu = () => import(/* webpackChunkName: "pages/menus/MegaMenu" */ './
 const Pagination = () => import(/* webpackChunkName: "pages/menus/Pagination" */ './Pagination.vue')
 const Breadcrumbs = () => import(/* webpackChunkName: "pages/menus/Breadcrumbs" */ './Breadcrumbs.vue')
 const ButtonGroup = () => import(/* webpackChunkName: "pages/menus/ButtonGroup" */ './ButtonGroup.vue')
+const VerticalButtonGroup = () => import(/* webpackChunkName: "pages/menus/VerticalButtonGroup" */ './VerticalButtonGroup.vue')
 
 export default {
   IconBar,
@@ -53,5 +54,6 @@ export default {
   MegaMenu,
   Pagination,
   Breadcrumbs,
-  ButtonGroup
+  ButtonGroup,
+  VerticalButtonGroup
 }
