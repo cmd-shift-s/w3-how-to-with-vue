@@ -5,6 +5,7 @@ import SubPage from '@/layout/SubPage.vue'
 import Home from '@/pages/Home.vue'
 
 import menus from '@/pages/menus'
+import images from '@/pages/images'
 
 function getPages(pages) {
   return Object.keys(pages).map(page => {
@@ -33,6 +34,12 @@ export const routes = [
     title: 'Menus',
     component: SubPage,
     children: getPages(menus)
+  },
+  {
+    path: '/images',
+    title: 'Images',
+    component: SubPage,
+    children: getPages(images)
   }
 ]
 

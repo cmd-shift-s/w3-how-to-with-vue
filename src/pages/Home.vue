@@ -1,5 +1,8 @@
 <template lang="html">
   <page title="W3 How To">
+    <card link="images/slideshow">
+      <slideshow></slideshow>
+    </card>
     <div class="card-container">
       <div class="half">
         <template v-for="route of routes1">
@@ -18,6 +21,7 @@
 <script>
 import Card from '../layout/Card.vue'
 import { routes } from '@/router'
+const Slideshow = () => import(/* webpackChunkName: "pages/images/Slideshow" */ '@/pages/images/Slideshow.vue')
 
 export default {
   name: 'home',
@@ -33,20 +37,25 @@ export default {
       const children1 = []
       const children2 = []
 
-      route.children.forEach((page, index) => {
-        if (index % 2 === 0) {
-          children1.push(page)
-        } else {
-          children2.push(page)
-        }
-      })
+      route.children
+        .filter(page => {
+          return !['Slideshow'].includes(page.component.name)
+        })
+        .forEach((page, index) => {
+          if (index % 2 === 0) {
+            children1.push(page)
+          } else {
+            children2.push(page)
+          }
+        })
 
       this.routes1.push(Object.assign({}, route, { children: children1 }))
       this.routes2.push(Object.assign({}, route, { children: children2 }))
     })
   },
   components: {
-    Card
+    Card,
+    Slideshow
   }
 }
 </script>
