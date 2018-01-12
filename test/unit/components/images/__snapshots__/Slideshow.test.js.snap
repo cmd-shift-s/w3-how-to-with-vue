@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slideshow.vue methods@changeSlide 1`] = `
+<div class="slideshow">
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <div class="numbertext">1 / 2</div> <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Caption Text">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slide fade is-active">
+            <div class="numbertext">2 / 2</div> <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" alt="Caption Two">
+            <div class="text">Caption Two</div>
+        </div> <a class="prev">❮</a> <a class="next">❯</a></div> <br>
+    <div class="dots"><span class="dot"></span><span class="dot is-active"></span></div>
+</div>
+`;
+
+exports[`Slideshow.vue methods@nextSlide 1`] = `
+<div class="slideshow">
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <div class="numbertext">1 / 2</div> <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Caption Text">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slide fade is-active">
+            <div class="numbertext">2 / 2</div> <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" alt="Caption Two">
+            <div class="text">Caption Two</div>
+        </div> <a class="prev">❮</a> <a class="next">❯</a></div> <br>
+    <div class="dots"><span class="dot"></span><span class="dot is-active"></span></div>
+</div>
+`;
+
+exports[`Slideshow.vue methods@nextSlide 2`] = `
+<div class="slideshow">
+    <div class="slideshow-container">
+        <div class="slide fade is-active">
+            <div class="numbertext">1 / 2</div> <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Caption Text">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slide fade">
+            <div class="numbertext">2 / 2</div> <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" alt="Caption Two">
+            <div class="text">Caption Two</div>
+        </div> <a class="prev">❮</a> <a class="next">❯</a></div> <br>
+    <div class="dots"><span class="dot is-active"></span><span class="dot"></span></div>
+</div>
+`;
+
+exports[`Slideshow.vue methods@prevSlide 1`] = `
+<div class="slideshow">
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <div class="numbertext">1 / 2</div> <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Caption Text">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slide fade is-active">
+            <div class="numbertext">2 / 2</div> <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" alt="Caption Two">
+            <div class="text">Caption Two</div>
+        </div> <a class="prev">❮</a> <a class="next">❯</a></div> <br>
+    <div class="dots"><span class="dot"></span><span class="dot is-active"></span></div>
+</div>
+`;
+
+exports[`Slideshow.vue methods@prevSlide 2`] = `
+<div class="slideshow">
+    <div class="slideshow-container">
+        <div class="slide fade is-active">
+            <div class="numbertext">1 / 2</div> <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Caption Text">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slide fade">
+            <div class="numbertext">2 / 2</div> <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" alt="Caption Two">
+            <div class="text">Caption Two</div>
+        </div> <a class="prev">❮</a> <a class="next">❯</a></div> <br>
+    <div class="dots"><span class="dot is-active"></span><span class="dot"></span></div>
+</div>
+`;
+
+exports[`Slideshow.vue render default 1`] = `
+<div class="slideshow">
+    <div class="slideshow-container">
+        <div class="slide fade is-active">
+            <div class="numbertext">1 / 2</div> <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Caption Text">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="slide fade">
+            <div class="numbertext">2 / 2</div> <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" alt="Caption Two">
+            <div class="text">Caption Two</div>
+        </div> <a class="prev">❮</a> <a class="next">❯</a></div> <br>
+    <div class="dots"><span class="dot is-active"></span><span class="dot"></span></div>
+</div>
+`;
