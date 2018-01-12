@@ -55,7 +55,9 @@ export default {
       this.changeSlide(this.curIdx > 0 ? this.curIdx - 1 : this.slideLength - 1)
     },
     nextSlide() {
-      this.changeSlide(this.curIdx >= this.slideLength - 1 ? 0 : this.curIdx + 1)
+      this.changeSlide(
+        this.curIdx >= this.slideLength - 1 ? 0 : this.curIdx + 1
+      )
     }
   }
 }
@@ -76,6 +78,10 @@ export default {
 
     &.is-active {
       display: block;
+    }
+
+    img {
+      width: 100%;
     }
   }
 
