@@ -8,7 +8,7 @@
     </template>
 
     <sample>
-      <pagination :current-page="curPage" :total-pages="6" @page-changed="pageChanged" visiblePages="10"></pagination>
+      <pagination :current-page="curPage" :total-pages="6" @page-changed="pageChanged" :visiblePages="10"></pagination>
     </sample>
 
     <template slot="examples">

@@ -29,12 +29,11 @@ export default {
     // Visible Pages
     visiblePages: {
       type: Number,
-      default: 5,
-      coerce: val => parseInt(val)
+      default: 5
     }
   },
   computed: {
-    lastPage () {
+    lastPage() {
       if (this.totalPages) {
         return this.totalPages
       } else {
@@ -43,11 +42,12 @@ export default {
           : Math.floor(this.totalItems / this.itemsPerPage) + 1
       }
     },
-    paginationRange () {
+    paginationRange() {
       const page = this.lastPage - this.visiblePages + 1
       const start =
         this.currentPage - this.visiblePages / 2 <= 0
-          ? 1 : this.currentPage + this.visiblePages / 2 > this.lastPage
+          ? 1
+          : this.currentPage + this.visiblePages / 2 > this.lastPage
             ? page >= 1 ? page : 1
             : Math.ceil(this.currentPage - this.visiblePages / 2)
 
