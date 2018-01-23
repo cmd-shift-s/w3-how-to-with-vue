@@ -8,12 +8,12 @@ const TopNavigation = () => import(/* webpackChunkName: "pages/menus/TopNavigati
 const ResponsiveTopnav = () => import(/* webpackChunkName: "pages/menus/ResponsiveTopnav" */ './ResponsiveTopnav.vue')
 const SideNavigation = () => import(/* webpackChunkName: "pages/menus/SideNavigation" */ './SideNavigation.vue')
 const FullscreenNavigation = () => import(/* webpackChunkName: "pages/menus/FullscreenNavigation" */ './FullscreenNavigation.vue')
-const OffCanvasMenu = () => import(/* webpackChunkName: "pages/menus/OffCanvasMenu" */ './OffCanvasMenu.vue')
-const HoverableSidenav = () => import(/* webpackChunkName: "pages/menus/HoverableSidenav" */ './HoverableSidenav.vue')
+const OffCanvasMenu = {page: () => import(/* webpackChunkName: "pages/menus/OffCanvasMenu" */ './OffCanvasMenu.vue'), menu: 'Off-Cavnas Menu'}
+const HoverableSidenav = {page: () => import(/* webpackChunkName: "pages/menus/HoverableSidenav" */ './HoverableSidenav.vue'), menu: 'Hover Sidenav Buttons'}
 const HorizontalScrollMenu = () => import(/* webpackChunkName: "pages/menus/HorizontalScrollMenu" */ './HorizontalScrollMenu.vue')
 const VerticalMenu = () => import(/* webpackChunkName: "pages/menus/VerticalMenu" */ './VerticalMenu.vue')
 const BottomNavigation = () => import(/* webpackChunkName: "pages/menus/BottomNavigation" */ './BottomNavigation.vue')
-const ResponsiveBottomNavigation = () => import(/* webpackChunkName: "pages/menus/ResponsiveBottomNavigation" */ './ResponsiveBottomNavigation.vue')
+const ResponsiveBottomNavigation = {page: () => import(/* webpackChunkName: "pages/menus/ResponsiveBottomNavigation" */ './ResponsiveBottomNavigation.vue'), menu: 'Responsive Bottom Nav'}
 const BottomBorderNavLinks = () => import(/* webpackChunkName: "pages/menus/BottomBorderNavLinks" */ './BottomBorderNavLinks.vue')
 const FixedMenu = () => import(/* webpackChunkName: "pages/menus/FixedMenu" */ './FixedMenu.vue')
 const SlideDownBarOnScroll = () => import(/* webpackChunkName: "pages/menus/SlideDownBarOnScroll" */ './SlideDownBarOnScroll.vue')

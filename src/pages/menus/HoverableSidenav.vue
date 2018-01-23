@@ -30,7 +30,6 @@
 import HoverableSidenav from '@/components/menus/HoverableSidenav.vue'
 export default {
   name: 'hoverable-sidenav-page',
-  menu: 'Hover Sidenav Buttons',
   data() {
     return {
       examples: [

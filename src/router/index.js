@@ -16,7 +16,7 @@ function getPages(pages) {
       name:
         pages[page].menu ||
         page.replace(/([A-Z])/g, str => ` ${str}`).substring(1),
-      component: pages[page]
+      component: pages[page].page || pages[page]
     }
     return item
   })

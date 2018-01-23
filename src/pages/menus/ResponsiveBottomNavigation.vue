@@ -41,7 +41,6 @@ import TopNav from '@/components/menus/TopNav.vue'
 
 export default {
   name: 'responsive-bottom-navigation-page',
-  menu: 'Responsive Bottom Nav',
   data() {
     return {
       currentLink: '',
