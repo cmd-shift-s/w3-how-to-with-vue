@@ -138,6 +138,8 @@ $menu-z-index: 10;
   background-color: #f1f1f1;
   overflow: auto;
   z-index: $menu-z-index;
+  font-size: 15px;
+  line-height: 1.5;
 
   .close {
     display: none;
@@ -174,6 +176,7 @@ $menu-z-index: 10;
   h2 {
     margin: 0;
     padding: 10px 10px;
+    font-size: 21px;
   }
 
   .link {
