@@ -10,7 +10,7 @@
     </template>
 
     <sample>
-      <slideshow :slides="slides"></slideshow>
+      <slideshow :slides="slides" show-dots overlap-text></slideshow>
     </sample>
 
     <template slot="examples">

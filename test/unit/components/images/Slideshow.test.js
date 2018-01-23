@@ -2,20 +2,19 @@ import { mount, renderer } from '#/unit/utils'
 import Slideshow from '@/components/images/Slideshow.vue'
 
 describe('Slideshow.vue', () => {
-  const propsData = {
-    slides: [
-      {
-        link: 'https://www.w3schools.com/howto/img_nature_wide.jpg',
-        text: 'Caption Text'
-      },
-      {
-        link: 'https://www.w3schools.com/howto/img_fjords_wide.jpg',
-        text: 'Caption Two'
-      }
-    ]
-  }
+  const slides = [
+    {
+      link: 'https://www.w3schools.com/howto/img_nature_wide.jpg',
+      text: 'Caption Text'
+    },
+    {
+      link: 'https://www.w3schools.com/howto/img_fjords_wide.jpg',
+      text: 'Caption Two'
+    }
+  ]
 
   it('render default', () => {
+    const propsData = { slides }
     const wrap = mount(Slideshow, { propsData })
 
     expect(wrap.hasClass('slideshow')).toBe(true)
@@ -28,6 +27,7 @@ describe('Slideshow.vue', () => {
   })
 
   it('methods@nextSlide', () => {
+    const propsData = { slides }
     const wrap = mount(Slideshow, { propsData })
 
     expect(wrap.vm.curIdx).toEqual(0)
@@ -55,6 +55,7 @@ describe('Slideshow.vue', () => {
   })
 
   it('methods@prevSlide', () => {
+    const propsData = { slides }
     const wrap = mount(Slideshow, { propsData })
 
     expect(wrap.vm.curIdx).toEqual(0)
@@ -82,6 +83,7 @@ describe('Slideshow.vue', () => {
   })
 
   it('methods@changeSlide', () => {
+    const propsData = { slides }
     const wrap = mount(Slideshow, { propsData })
 
     expect(wrap.vm.curIdx).toEqual(0)
@@ -93,6 +95,75 @@ describe('Slideshow.vue', () => {
     const $changeSlide = wrap.emitted()['change-slide']
     expect($changeSlide.length).toEqual(1)
     expect($changeSlide[0]).toEqual([1])
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
+
+  it('props#is-gallery', () => {
+    const propsData = { slides, isGallery: true }
+    const wrap = mount(Slideshow, { propsData })
+
+    expect(wrap.find('.gallery-container').is('div')).toBe(true)
+
+    const $gallery = wrap.findAll('.gallery')
+    expect($gallery.length).toEqual(2)
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+
+    $gallery.at(1).trigger('click')
+
+    expect(wrap.vm.curIdx).toEqual(1)
+
+    const $changeSlide = wrap.emitted()['change-slide']
+    expect($changeSlide.length).toEqual(1)
+    expect($changeSlide[0]).toEqual([1])
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
+
+  it('props#show-dots', () => {
+    const propsData = { slides, showDots: true }
+    const wrap = mount(Slideshow, { propsData })
+
+    expect(wrap.find('.dots').is('div')).toBe(true)
+
+    const $dot = wrap.findAll('.dot')
+    expect($dot.length).toEqual(2)
+    expect($dot.at(0).hasClass('is-active'))
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+
+    $dot.at(1).trigger('click')
+
+    expect(wrap.vm.curIdx).toEqual(1)
+
+    const $changeSlide = wrap.emitted()['change-slide']
+    expect($changeSlide.length).toEqual(1)
+    expect($changeSlide[0]).toEqual([1])
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
+
+  it('props#overlap-text', () => {
+    const propsData = { slides, overlapText: true }
+    const wrap = mount(Slideshow, { propsData })
+
+    expect(wrap.find('.text').hasClass('is-overlapped')).toBe(true)
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
