@@ -9,7 +9,7 @@ describe('Pagination.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('pagination')).toBe(true)
+    expect(wrap.classes()).toContain('pagination')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

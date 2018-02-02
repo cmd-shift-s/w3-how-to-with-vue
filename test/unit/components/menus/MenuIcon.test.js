@@ -5,15 +5,15 @@ describe('MenuIcon.vue', () => {
   it('render default', () => {
     const wrap = mount(MenuIcon)
 
-    expect(wrap.hasClass('menu-icon')).toBe(true)
+    expect(wrap.classes()).toContain('menu-icon')
 
     // .bar1, .bar2, .bar3
     expect(wrap.vm.$el.children).toHaveLength(3)
 
     // should not do anything
-    wrap.vm.$el.click()
+    wrap.trigger('click')
 
-    expect(wrap.hasClass('change')).not.toBe(true)
+    expect(wrap.classes()).not.toContain('change')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -28,9 +28,8 @@ describe('MenuIcon.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('menu-icon')).toBe(true)
-    expect(wrap.hasClass('is-anime')).toBe(true)
-    expect(wrap.hasClass('change')).not.toBe(true)
+    expect(wrap.classes()).toContain('menu-icon', 'is-anime')
+    expect(wrap.classes()).not.toContain('change')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -40,11 +39,11 @@ describe('MenuIcon.vue', () => {
     expect(wrap.vm.isChanged).toBe(false)
 
     // should change data and classList
-    wrap.vm.$el.click()
+    wrap.trigger('click')
 
     expect(wrap.vm.isChanged).toBe(true)
     wrap.update()
-    expect(wrap.hasClass('change')).toBe(true)
+    expect(wrap.classes()).toContain('change')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

@@ -9,11 +9,11 @@ describe('Dropdown.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('dropdown')).toBe(true)
+    expect(wrap.classes()).toContain('dropdown')
     expect(wrap.find('button').text().trim()).toEqual('button')
 
     // button click is-active
-    wrap.find('button').element.click()
+    wrap.find('button').trigger('click')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -31,7 +31,7 @@ describe('Dropdown.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('dropdown')).toBe(true)
+    expect(wrap.classes()).toContain('dropdown')
     expect(wrap.find('button').text().trim()).toEqual('button')
     expect(wrap.find('.content a').text()).toEqual('Link')
 
@@ -49,9 +49,9 @@ describe('Dropdown.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('dropdown')).toBe(true)
+    expect(wrap.classes()).toContain('dropdown')
     expect(wrap.find('button').text().trim()).toEqual('button')
-    expect(wrap.find('i').hasClass('fa fa-caret-down')).toBe(true)
+    expect(wrap.find('i').classes()).toContain('fa', 'fa-caret-down')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -67,8 +67,7 @@ describe('Dropdown.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('dropdown')).toBe(true)
-    expect(wrap.hasClass('is-hoverable')).toBe(true)
+    expect(wrap.classes()).toContain('dropdown', 'is-hoverable')
     expect(wrap.find('button').text().trim()).toEqual('button')
 
     renderer.renderToString(wrap.vm, (err, str) => {

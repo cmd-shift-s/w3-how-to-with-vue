@@ -5,7 +5,7 @@ describe('TopNav.vue', () => {
   it('render default', () => {
     const wrap = mount(TopNav)
 
-    expect(wrap.hasClass('top-nav')).toBe(true)
+    expect(wrap.classes()).toContain('top-nav')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -20,7 +20,7 @@ describe('TopNav.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('top-nav')).toBe(true)
+    expect(wrap.classes()).toContain('top-nav')
     expect(wrap.find('a').text()).toEqual('Test')
 
     renderer.renderToString(wrap.vm, (err, str) => {
@@ -36,8 +36,7 @@ describe('TopNav.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('top-nav')).toBe(true)
-    expect(wrap.hasClass('is-responsive')).toBe(true)
+    expect(wrap.classes()).toContain('top-nav', 'is-responsive')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -47,7 +46,7 @@ describe('TopNav.vue', () => {
     wrap.vm.$el.querySelector('.toggle-menu').click()
     wrap.update()
 
-    expect(wrap.hasClass('is-active')).toBe(true)
+    expect(wrap.classes()).toContain('is-active')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -62,8 +61,7 @@ describe('TopNav.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('top-nav')).toBe(true)
-    expect(wrap.hasClass('is-bottom')).toBe(true)
+    expect(wrap.classes()).toContain('top-nav', 'is-bottom')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

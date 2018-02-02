@@ -5,7 +5,7 @@ describe('Accordion.vue', () => {
   it('render default', () => {
     const wrap = mount(Accordion)
 
-    expect(wrap.hasClass('accordion')).toBe(true)
+    expect(wrap.classes()).toContain('accordion')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -20,7 +20,7 @@ describe('Accordion.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('accordion')).toBe(true)
+    expect(wrap.classes()).toContain('accordion')
     expect(wrap.find('button').text()).toEqual('Section 1')
 
     renderer.renderToString(wrap.vm, (err, str) => {
@@ -36,8 +36,7 @@ describe('Accordion.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('accordion')).toBe(true)
-    expect(wrap.hasClass('has-icon')).toBe(true)
+    expect(wrap.classes()).toContain('accordion', 'has-icon')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -52,8 +51,7 @@ describe('Accordion.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('accordion')).toBe(true)
-    expect(wrap.hasClass('is-animated')).toBe(true)
+    expect(wrap.classes()).toContain('accordion', 'is-animated')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -64,14 +62,14 @@ describe('Accordion.vue', () => {
   it('button@click', () => {
     const wrap = mount(Accordion)
 
-    expect(wrap.hasClass('accordion')).toBe(true)
+    expect(wrap.classes()).toContain('accordion')
 
-    expect(wrap.hasClass('is-active')).not.toBe(true)
+    expect(wrap.classes()).not.toContain('is-active')
 
     const button = wrap.find('button')
     button.trigger('click')
 
-    expect(wrap.hasClass('is-active')).toBe(true)
+    expect(wrap.classes()).toContain('is-active')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

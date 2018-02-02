@@ -5,7 +5,7 @@ describe('SideNav.vue', () => {
   it('render default', () => {
     const wrap = mount(SideNav)
 
-    expect(wrap.hasClass('side-nav')).toBe(true)
+    expect(wrap.classes()).toContain('side-nav')
     expect(wrap.find('.close-btn').is('a')).toBe(true)
 
     renderer.renderToString(wrap.vm, (err, str) => {
@@ -20,8 +20,7 @@ describe('SideNav.vue', () => {
     wrap.setProps('active', true)
     wrap.update()
 
-    const $closeBtn = wrap.vm.$el.querySelector('.close-btn')
-    $closeBtn.click()
+    wrap.find('.close-btn').trigger('click')
 
     expect(wrap.emitted()['update:active'][0]).toEqual([false])
     expect(wrap.emitted().close).toBeTruthy()
@@ -34,7 +33,7 @@ describe('SideNav.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('is-animated')).toBe(true)
+    expect(wrap.classes()).toContain('is-animated')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -49,7 +48,7 @@ describe('SideNav.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('has-text-centered')).toBe(true)
+    expect(wrap.classes()).toContain('has-text-centered')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

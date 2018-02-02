@@ -5,7 +5,7 @@ describe('ButtonGroup.vue', () => {
   it('render default', () => {
     const wrap = mount(ButtonGroup)
 
-    expect(wrap.hasClass('button-group')).toBe(true)
+    expect(wrap.classes()).toContain('button-group')
     expect(wrap.isEmpty()).toBe(true)
 
     renderer.renderToString(wrap.vm, (err, str) => {
@@ -21,7 +21,7 @@ describe('ButtonGroup.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('is-fullwidth')).toBe(true)
+    expect(wrap.classes()).toContain('is-fullwidth')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -36,7 +36,7 @@ describe('ButtonGroup.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('is-vertical')).toBe(true)
+    expect(wrap.classes()).toContain('is-vertical')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

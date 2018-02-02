@@ -5,7 +5,7 @@ describe('VerticalMenu.vue', () => {
   it('render default', () => {
     const wrap = mount(VerticalMenu)
 
-    expect(wrap.hasClass('vertical-menu')).toBe(true)
+    expect(wrap.classes()).toContain('vertical-menu')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

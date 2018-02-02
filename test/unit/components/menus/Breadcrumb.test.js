@@ -16,7 +16,7 @@ describe('Breadcrumb.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('breadcrumb')).toBe(true)
+    expect(wrap.classes()).toContain('breadcrumb')
     expect(wrap.findAll('a').length).toEqual(3)
     expect(wrap.findAll('li').length).toEqual(4)
 

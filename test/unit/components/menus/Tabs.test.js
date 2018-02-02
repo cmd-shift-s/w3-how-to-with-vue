@@ -13,18 +13,16 @@ describe('Tabs.vue', () => {
       attachToDocument: true
     })
 
-    expect(wrap.hasClass('tabs')).toBe(true)
-    expect(wrap.hasClass('is-top')).toBe(true)
+    expect(wrap.classes()).toContain('tabs', 'is-top')
     expect(wrap.vm.currentLink).toEqual('test')
 
     wrap.update()
 
-    expect(wrap.find('.tab-link').hasClass('is-active')).toBe(true)
+    expect(wrap.find('.tab-link').classes()).toContain('is-active')
 
     // tab-content의 is-active는 renderer에서 상태 값이 없기 때문에 볼 수 없다.
     const $test = wrap.find('#test')
-    expect($test.hasClass('tab-content')).toBe(true)
-    expect($test.hasClass('is-active')).toBe(true)
+    expect($test.classes()).toContain('tab-content', 'is-active')
     expect($test.text()).toEqual('test content')
 
     renderer.renderToString(wrap.vm, (err, str) => {
@@ -49,7 +47,7 @@ describe('Tabs.vue', () => {
       attachToDocument: true
     })
 
-    expect(wrap.hasClass('tabs')).toBe(true)
+    expect(wrap.classes()).toContain('tabs')
     expect(wrap.vm.currentLink).toEqual('test1')
 
     wrap.update()
@@ -57,32 +55,30 @@ describe('Tabs.vue', () => {
     // 첫번째 버튼
     const $btn1 = wrap.find('.tab-link')
 
-    expect($btn1.hasClass('is-active')).toBe(true)
+    expect($btn1.classes()).toContain('is-active')
 
     const $test1 = wrap.find('#test1')
-    expect($test1.hasClass('tab-content')).toBe(true)
-    expect($test1.hasClass('is-active')).toBe(true)
+    expect($test1.classes()).toContain('tab-content', 'is-active')
     expect($test1.text()).toEqual('test1 content')
 
     const $btn2 = wrap.find('.tab-link:nth-child(2)')
-    expect($btn2.hasClass('is-active')).toBe(false)
+    expect($btn2.classes()).not.toContain('is-active')
 
     // 2번째 탭 클릭
-    $btn2.element.click()
+    $btn2.trigger('click')
     wrap.update()
 
     expect(wrap.vm.currentLink).toEqual('test2')
 
-    expect($btn2.hasClass('is-active')).toBe(true)
+    expect($btn2.classes()).toContain('is-active')
 
     const $test2 = wrap.find('#test2')
-    expect($test2.hasClass('tab-content')).toBe(true)
-    expect($test2.hasClass('is-active')).toBe(true)
+    expect($test2.classes()).toContain('tab-content', 'is-active')
     expect($test2.text()).toEqual('test2 content')
 
     // 이전에 선택된 tab의 is-active가 사라짐
-    expect(wrap.find('.tab-link').hasClass('is-active')).toBe(false)
-    expect(wrap.find('#test1').hasClass('is-active')).toBe(false)
+    expect(wrap.find('.tab-link').classes()).not.toContain('is-active')
+    expect(wrap.find('#test1').classes()).not.toContain('is-active')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -102,8 +98,7 @@ describe('Tabs.vue', () => {
       attachToDocument: true
     })
 
-    expect(wrap.hasClass('tabs')).toBe(true)
-    expect(wrap.hasClass('is-animated')).toBe(true)
+    expect(wrap.classes()).toContain('tabs', 'is-animated')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -123,8 +118,7 @@ describe('Tabs.vue', () => {
       attachToDocument: true
     })
 
-    expect(wrap.hasClass('tabs')).toBe(true)
-    expect(wrap.hasClass('is-top')).toBe(true)
+    expect(wrap.classes()).toContain('tabs', 'is-top')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -144,8 +138,7 @@ describe('Tabs.vue', () => {
       attachToDocument: true
     })
 
-    expect(wrap.hasClass('tabs')).toBe(true)
-    expect(wrap.hasClass('is-right')).toBe(true)
+    expect(wrap.classes()).toContain('tabs', 'is-right')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -165,8 +158,7 @@ describe('Tabs.vue', () => {
       attachToDocument: true
     })
 
-    expect(wrap.hasClass('tabs')).toBe(true)
-    expect(wrap.hasClass('is-bottom')).toBe(true)
+    expect(wrap.classes()).toContain('tabs', 'is-bottom')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -186,8 +178,7 @@ describe('Tabs.vue', () => {
       attachToDocument: true
     })
 
-    expect(wrap.hasClass('tabs')).toBe(true)
-    expect(wrap.hasClass('is-left')).toBe(true)
+    expect(wrap.classes()).toContain('tabs', 'is-left')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

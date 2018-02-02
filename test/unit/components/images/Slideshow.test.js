@@ -17,7 +17,7 @@ describe('Slideshow.vue', () => {
     const propsData = { slides }
     const wrap = mount(Slideshow, { propsData })
 
-    expect(wrap.hasClass('slideshow')).toBe(true)
+    expect(wrap.classes()).toContain('slideshow')
     expect(wrap.vm.slideLength).toEqual(2)
 
     renderer.renderToString(wrap.vm, (err, str) => {
@@ -138,7 +138,7 @@ describe('Slideshow.vue', () => {
 
     const $dot = wrap.findAll('.dot')
     expect($dot.length).toEqual(2)
-    expect($dot.at(0).hasClass('is-active'))
+    expect($dot.at(0).classes()).toContain('is-active')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -163,7 +163,7 @@ describe('Slideshow.vue', () => {
     const propsData = { slides, overlapText: true }
     const wrap = mount(Slideshow, { propsData })
 
-    expect(wrap.find('.text').hasClass('is-overlapped')).toBe(true)
+    expect(wrap.find('.text').classes()).toContain('is-overlapped')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

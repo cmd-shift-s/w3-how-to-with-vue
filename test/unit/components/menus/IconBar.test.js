@@ -5,8 +5,7 @@ describe('IconBar.vue', () => {
   it('render default', () => {
     const wrap = mount(IconBar)
 
-    expect(wrap.hasClass('icon-bar')).toBe(true)
-    expect(wrap.hasClass('horizontal')).toBe(true)
+    expect(wrap.classes()).toContain('icon-bar', 'horizontal')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -21,8 +20,7 @@ describe('IconBar.vue', () => {
       }
     })
 
-    expect(wrap.hasClass('icon-bar')).toBe(true)
-    expect(wrap.hasClass('vertical')).toBe(true)
+    expect(wrap.classes()).toContain('icon-bar', 'vertical')
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
