@@ -170,7 +170,7 @@ export default {
           '```'
         ],
         [
-          '``` js',
+          '``` html',
           '<button class="tablinks" onclick="openCity(event, \'London\')" id="defaultOpen">London</button>',
           '',
           '<script>',

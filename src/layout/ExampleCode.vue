@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import marked from 'marked'
+import { md } from '@/utils'
 
 export default {
   name: 'example',
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     compileMarked(code) {
-      return marked(code, { sanitize: true })
+      return md.render(code)
     }
   }
 }
