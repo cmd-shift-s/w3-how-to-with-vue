@@ -28,7 +28,7 @@ describe('MenuIcon.vue', () => {
       }
     })
 
-    expect(wrap.classes()).toContain('menu-icon', 'is-anime')
+    expect(wrap.classes()).toContains(['menu-icon', 'is-anime'])
     expect(wrap.classes()).not.toContain('change')
 
     renderer.renderToString(wrap.vm, (err, str) => {

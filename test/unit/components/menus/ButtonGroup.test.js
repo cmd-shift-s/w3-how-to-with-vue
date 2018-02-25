@@ -1,4 +1,4 @@
-import { mount, shallow, renderer } from '#/unit/utils'
+import { mount, renderer } from '#/unit/utils'
 import ButtonGroup from '@/components/menus/ButtonGroup.vue'
 
 describe('ButtonGroup.vue', () => {

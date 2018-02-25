@@ -36,7 +36,7 @@ describe('Accordion.vue', () => {
       }
     })
 
-    expect(wrap.classes()).toContain('accordion', 'has-icon')
+    expect(wrap.classes()).toContains(['accordion', 'has-icon'])
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)

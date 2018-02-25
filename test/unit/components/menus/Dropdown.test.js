@@ -51,7 +51,7 @@ describe('Dropdown.vue', () => {
 
     expect(wrap.classes()).toContain('dropdown')
     expect(wrap.find('button').text().trim()).toEqual('button')
-    expect(wrap.find('i').classes()).toContain('fa', 'fa-caret-down')
+    expect(wrap.find('i').classes()).toContains(['fa', 'fa-caret-down'])
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -67,7 +67,8 @@ describe('Dropdown.vue', () => {
       }
     })
 
-    expect(wrap.classes()).toContain('dropdown', 'is-hoverable')
+    expect(wrap.classes()).toContain('dropdown')
+    expect(wrap.classes()).toContain('is-hoverable')
     expect(wrap.find('button').text().trim()).toEqual('button')
 
     renderer.renderToString(wrap.vm, (err, str) => {

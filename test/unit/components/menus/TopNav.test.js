@@ -36,7 +36,7 @@ describe('TopNav.vue', () => {
       }
     })
 
-    expect(wrap.classes()).toContain('top-nav', 'is-responsive')
+    expect(wrap.classes()).toContains(['top-nav', 'is-responsive'])
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
@@ -61,7 +61,7 @@ describe('TopNav.vue', () => {
       }
     })
 
-    expect(wrap.classes()).toContain('top-nav', 'is-bottom')
+    expect(wrap.classes()).toContains(['top-nav', 'is-bottom'])
 
     renderer.renderToString(wrap.vm, (err, str) => {
       if (err) console.error(err)
