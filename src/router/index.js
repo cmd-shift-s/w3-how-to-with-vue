@@ -4,8 +4,8 @@ import SubPage from '@/layout/SubPage.vue'
 
 import Home from '@/pages/Home.vue'
 
-import menus from '@/pages/menus'
-import images from '@/pages/images'
+import * as menus from '@/pages/menus'
+import * as images from '@/pages/images'
 
 function getPages(pages) {
   return Object.keys(pages).map(page => {
