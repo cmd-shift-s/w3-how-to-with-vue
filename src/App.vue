@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-
+  <div v-if="showExamples">
+    <router-view></router-view>
+  </div>
+  <div id="app" v-else>
     <app-menu></app-menu>
 
     <div class="container">
@@ -17,6 +19,11 @@ import AppMenu from '@/layout/AppMenu.vue'
 
 export default {
   name: 'app',
+  computed: {
+    showExamples() {
+      return location.hash.startsWith('#/examples')
+    }
+  },
   components: {
     AppMenu
   }

@@ -32,13 +32,14 @@ export default {
     }
   },
   created() {
-    const _routes = routes.slice(1) // remove home
+    const _routes = routes.slice(2) // remove home and examples
     _routes.forEach(route => {
       const children1 = []
       const children2 = []
 
       route.children
         .filter(page => {
+          console.log(page)
           return !['Slideshow'].includes(page.component.name)
         })
         .forEach((page, index) => {

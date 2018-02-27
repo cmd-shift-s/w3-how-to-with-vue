@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalBox.vue render default 1`] = `
+<div class="modal-box">
+    <div class="modal-content"></div>
+</div>
+`;

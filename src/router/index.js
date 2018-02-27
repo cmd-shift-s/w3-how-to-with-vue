@@ -6,6 +6,9 @@ import Home from '@/pages/Home.vue'
 
 import * as menus from '@/pages/menus'
 import * as images from '@/pages/images'
+import * as more from '@/pages/more'
+
+import * as examples from '@/examples'
 
 function getPages(pages) {
   return Object.keys(pages).map(page => {
@@ -30,6 +33,21 @@ export const routes = [
     component: Home
   },
   {
+    path: '/examples',
+    title: 'Examples',
+    name: 'Examples',
+    component: SubPage,
+    children: Object.keys(examples).map(example => {
+      return {
+        path: example,
+        title: 'More Examples',
+        name: 'More Examples',
+        component: SubPage,
+        children: getPages(examples[example])
+      }
+    })
+  },
+  {
     path: '/menus',
     title: 'Menus',
     component: SubPage,
@@ -40,6 +58,12 @@ export const routes = [
     title: 'Images',
     component: SubPage,
     children: getPages(images)
+  },
+  {
+    path: '/more',
+    title: 'More',
+    component: SubPage,
+    children: getPages(more)
   }
 ]
 

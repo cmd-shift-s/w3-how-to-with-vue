@@ -3,7 +3,7 @@
     title="Sticky/Affix Navbar"
     :intro="intro">
     <sample class="sticky-navbar-page">
-      <iframe src="pages/menus/sticky-navbar.html" frameborder="0"></iframe>
+      <iframe src="#/examples/menu/sticky-navbar" frameborder="0"></iframe>
     </sample>
 
     <template slot="examples">
