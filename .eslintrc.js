@@ -22,6 +22,8 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // Require or disallow a space before function parenthesis
-    'space-before-function-paren': 0
+    'space-before-function-paren': 0,
+    // allow trailing commas
+    'comma-dangle': 0
   }
 }
