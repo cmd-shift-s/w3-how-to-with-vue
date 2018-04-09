@@ -197,9 +197,14 @@ export default {
       background-color: rgba(0, 0, 0, 0.9);
 
       .modal-content {
+        max-width: 1000px;
         background-color: transparent;
         border: none;
         box-shadow: none;
+
+        .close {
+          font-size: 35px;
+        }
       }
     }
 
