@@ -68,8 +68,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     noInfo: true,
-    overlay: true,
-    contentBase: path.join(__dirname, 'static')
+    overlay: true
   },
   performance: {
     hints: false
