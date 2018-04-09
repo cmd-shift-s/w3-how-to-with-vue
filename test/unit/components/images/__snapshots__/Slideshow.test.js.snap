@@ -100,6 +100,26 @@ exports[`Slideshow.vue methods@prevSlide 2`] = `
 </div>
 `;
 
+exports[`Slideshow.vue props#activeIndex 1`] = `
+<div class="slideshow">
+    <div class="slideshow-container">
+        <div class="slide fade is-active">
+            <div class="numbertext">1 / 2</div> <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="Caption Text">
+            <div class="text">
+                <p>Caption Text</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <div class="numbertext">2 / 2</div> <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" alt="Caption Two">
+            <div class="text">
+                <p>Caption Two</p>
+            </div>
+        </div> <a class="prev">❮</a> <a class="next">❯</a></div>
+    <!----><br>
+    <!---->
+</div>
+`;
+
 exports[`Slideshow.vue props#is-gallery 1`] = `
 <div class="slideshow">
     <div class="slideshow-container">

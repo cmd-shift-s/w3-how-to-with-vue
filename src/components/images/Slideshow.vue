@@ -44,11 +44,15 @@ export default {
     },
     isGallery: Boolean,
     showDots: Boolean,
-    overlapText: Boolean
+    overlapText: Boolean,
+    activeIndex: {
+      type: Number,
+      default: 0
+    }
   },
   data() {
     return {
-      curIdx: 0
+      curIdx: this.activeIndex
     }
   },
   computed: {
@@ -56,10 +60,18 @@ export default {
       return this.slides.length
     }
   },
+  watch: {
+    activeIndex() {
+      if (this.curIdx !== this.activeIndex) {
+        this.curIdx = this.activeIndex
+      }
+    }
+  },
   methods: {
     changeSlide(num) {
       this.curIdx = this.slideLength <= num ? 0 : num
-      this.$emit('change-slide', num)
+      this.$emit('change-slide', this.curIdx)
+      this.$emit('update:activeIndex', this.curIdx)
     },
     prevSlide() {
       this.changeSlide(this.curIdx > 0 ? this.curIdx - 1 : this.slideLength - 1)

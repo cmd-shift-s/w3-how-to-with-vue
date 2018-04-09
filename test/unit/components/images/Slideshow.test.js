@@ -102,6 +102,26 @@ describe('Slideshow.vue', () => {
     })
   })
 
+  it('props#activeIndex', () => {
+    const propsData = { slides, activeIndex: 1 }
+    const wrap = mount(Slideshow, { propsData })
+
+    expect(wrap.vm.curIdx).toEqual(1)
+
+    wrap.vm.changeSlide(0)
+
+    expect(wrap.vm.curIdx).toEqual(0)
+
+    const $activeIndex = wrap.emitted()['update:activeIndex']
+    expect($activeIndex.length).toEqual(1)
+    expect($activeIndex[0]).toEqual([0])
+
+    renderer.renderToString(wrap.vm, (err, str) => {
+      if (err) console.error(err)
+      expect(str).toMatchSnapshot()
+    })
+  })
+
   it('props#is-gallery', () => {
     const propsData = { slides, isGallery: true }
     const wrap = mount(Slideshow, { propsData })
