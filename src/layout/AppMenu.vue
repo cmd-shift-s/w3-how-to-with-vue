@@ -196,7 +196,7 @@ $menu-z-index: 10;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .left-menu {
     display: none;
     height: calc(100% - 45px);

@@ -36,7 +36,7 @@ export default {
   padding: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .container {
     margin-left: 0px;
     margin-top: 45px;
