@@ -11,7 +11,7 @@
 
     <sample>
       <a class="btn-modal" v-for="(slide, index) of slides" @click="openModal(index)">
-        <img :src="slide.thumbnail" :alt="slide.text" width="300" height="200">
+        <img :src="slide.thumbnail" :alt="slide.text">
       </a>
       <modal-box :is-active.sync="modal.isActive">
         <div class="modal-header">
@@ -86,6 +86,7 @@ export default {
 
       & > img {
         border-radius: 5px;
+        width: 100%;
       }
     }
 
