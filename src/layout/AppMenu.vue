@@ -20,7 +20,7 @@
       <div class="search">
         <input type="text" class="searchinput" v-model="search" placeholder="Search...">
       </div>
-      <div class="menu-item" v-for="route of filteredRoute">
+      <div class="menu-item" v-for="route of filteredRoute" :key="route">
         <h2>{{route.title}}</h2>
         <router-link class="link" v-for="children of route.children" :key="children.path" :to="{name: children.name}" exact>{{children.name}}</router-link>
         <router-link class="link" v-if="!route.children" :to="route.path" exact>{{route.name}}</router-link>

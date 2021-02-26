@@ -44,7 +44,7 @@ export default {
       if (this.isHoverable) return
       this.isActive = !this.isActive
     },
-    close($event) {
+    close() {
       this.isActive = false
     }
   }

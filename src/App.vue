@@ -14,18 +14,20 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator'
 import AppMenu from '@/layout/AppMenu.vue'
 
-export default {
-  name: 'app',
-  computed: {
-    showExamples() {
-      return location.hash.startsWith('#/examples')
-    }
-  },
+@Component({
   components: {
     AppMenu
+  }
+})
+export default class App extends Vue {
+  @Prop() private msg!: string;
+
+  get showExamples() {
+    return location.hash.startsWith('#/examples')
   }
 }
 </script>

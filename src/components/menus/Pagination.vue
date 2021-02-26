@@ -2,7 +2,7 @@
 <template lang="html">
   <div class="pagination">
     <a href="javascript:void(0)" @click.prevent="pageChanged(1)">&laquo;</a>
-    <a href="javascript:void(0)" v-for="n in paginationRange" :class="activePage(n)" @click.prevent="pageChanged(n)">{{n}}</a>
+    <a href="javascript:void(0)" v-for="n in paginationRange" :class="activePage(n)" @click.prevent="pageChanged(n)" :key="n">{{n}}</a>
     <a href="javascript:void(0)" @click.prevent="pageChanged(lastPage)">&raquo;</a>
   </div>
 </template>

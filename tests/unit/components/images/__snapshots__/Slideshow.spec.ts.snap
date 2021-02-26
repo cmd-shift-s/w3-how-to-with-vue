@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slideshow.vue render default 1`] = `
+<div
+  class="slideshow"
+>
+  <div
+    class="slideshow-container"
+  >
+    <div
+      class="slide fade is-active"
+    >
+      <div
+        class="numbertext"
+      >
+        1 / 2
+      </div>
+       
+      <img
+        alt="Caption Text"
+        src="https://www.w3schools.com/howto/img_nature_wide.jpg"
+      />
+       
+      <div
+        class="text"
+      >
+        <p>
+          Caption Text
+        </p>
+      </div>
+    </div>
+    <div
+      class="slide fade"
+    >
+      <div
+        class="numbertext"
+      >
+        2 / 2
+      </div>
+       
+      <img
+        alt="Caption Two"
+        src="https://www.w3schools.com/howto/img_fjords_wide.jpg"
+      />
+       
+      <div
+        class="text"
+      >
+        <p>
+          Caption Two
+        </p>
+      </div>
+    </div>
+     
+    <a
+      class="prev"
+    >
+      ❮
+    </a>
+     
+    <a
+      class="next"
+    >
+      ❯
+    </a>
+  </div>
+   
+  <!---->
+   
+  <br />
+   
+  <!---->
+</div>
+`;

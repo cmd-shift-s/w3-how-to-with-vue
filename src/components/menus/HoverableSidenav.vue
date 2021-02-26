@@ -30,7 +30,6 @@ export default {
     color: white; /* White text color */
     border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
 
-
     &:hover {
       left: 80px;
     }
