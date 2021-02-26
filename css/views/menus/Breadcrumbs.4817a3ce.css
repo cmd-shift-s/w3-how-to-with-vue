@@ -1,0 +1,1 @@
+.breadcrumb{padding:10px 16px;list-style:none;background-color:#eee}.breadcrumb li{display:inline;font-size:18px}.breadcrumb li+li:before{padding:8px;color:#000;content:"/\00a0"}.breadcrumb li a{color:#0275d8;text-decoration:none}.breadcrumb li a:hover{color:#01447e;text-decoration:underline}.breadcrumb-page .sample .breadcrumb{width:100%}
